@@ -19,6 +19,21 @@ function cube_odd($a) {
   }
 };
 
+// Alternative Solutions:
+// function cube_odd($a) {
+//         $sum = 0;
+//         foreach ($a as $number) {
+//             if (!is_numeric($number)) {
+//                 return null;
+//             }
+//             if ($number & 1) {
+//                 $sum += ($number ** 3);
+//             }
+//         }
+//
+//         return $sum;
+// }
+
 $answer =  cube_odd(["a", 12, 9, "z", 42]);
 print_r("$answer \n");
 
