@@ -14,7 +14,9 @@ function fake_bin($s) {
   return $new;
 };
 
-$answer =  fake_bin('45385593107843568');
-print_r("$answer \n");
+// Alternative Solution:
+// function fake_bin($s) {
+//   return preg_replace(['/[0-4]/', '/[5-9]/'], [0,1],$s);
+// };
 
 ?>
