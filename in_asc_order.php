@@ -11,3 +11,13 @@ in_asc_order([1, 2, 4, 7, 19]); // true
 in_asc_order([1, 2, 3, 4, 5]); // true
 in_asc_order([1, 6, 10, 18, 2, 4, 20]); // false
 in_asc_order([9, 8, 7, 6, 5, 4, 3, 2, 1]); // false (NOTE: because the numbers are in DESCENDING order, not ascending order) -->
+
+
+<?php
+function in_asc_order($arr) {
+  $arr1 = $arr;
+  $x = sort($arr);
+  return $x === $arr;
+}
+
+?>
