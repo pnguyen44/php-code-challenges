@@ -18,6 +18,19 @@ function in_asc_order($arr) {
   $arr1 = $arr;
   $x = sort($arr);
   return $x === $arr;
-}
+};
 
+// Alternative Solution:
+// function in_asc_order($arr) {
+//
+//   $prev = $arr[0];
+//
+//   foreach($arr as $key => $value) {
+//    if($prev > $value) return false;
+//    $prev = $value;
+//   }
+//
+//   return true;
+//
+// };
 ?>
