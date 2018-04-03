@@ -25,7 +25,4 @@ function getCount($str) {
 //   return sizeof(array_intersect(str_split($str), $findLetters));
 // }
 
-$answer =  getCount("abracadabra");
-print_r("$answer \n");
-
 ?>
