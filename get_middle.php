@@ -19,6 +19,16 @@
 //
 // The middle character(s) of the word represented as a string.
 
+function getMiddle($text) {
+  $half = strlen($text)/2;
+  if(strlen($text)% 2 === 0) {
+      return substr($text, $half - 1,2);
+  } else {
+      return substr($text, floor($half),1);
+  }
+};
 
+$answer =  getMiddle("middle");
+print_r("$answer \n");
 
 ?>
