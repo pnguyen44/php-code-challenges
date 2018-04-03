@@ -7,16 +7,11 @@
 //
 // Array will not be empty.
 
-function product($carry, $item) {
-  $carry *= $item;
-  return $carry;
-}
 function grow($a) {
-  return array_reduce($a, "product", 1);
+  $result = 1;
+  for ($i = 0; $i < count($a); $result *= $a[$i++]) {}
+return $result;
 }
-
-$answer =  grow([1, 2, 3]);
-print_r("$answer \n");
 
 // Alternative Solutions:
 // function grow($a) {
@@ -25,4 +20,13 @@ print_r("$answer \n");
 //         return $result = array_product($a);
 //     }
 // }
+
+// function product($carry, $item) {
+//   $carry *= $item;
+//   return $carry;
+// }
+// function grow($a) {
+//   return array_reduce($a, "product", 1);
+// }
+
 ?>
