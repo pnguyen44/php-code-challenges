@@ -11,4 +11,11 @@
 // remove("Hi! Hi!") === "Hi Hi!"
 // remove("Hi") === "Hi!"
 
+function remove(string $s): string {
+  return str_replace('!', '',$s). '!';
+}
+
+$answer =  remove("!!Hi!!!");
+print_r("$answer \n");
+
 ?>
