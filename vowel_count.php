@@ -11,4 +11,21 @@ function getCount($str) {
   return  abs(strlen($str) - strlen(str_replace($search, '', $str)));
 }
 
+// Alternative Solutions:
+//
+// function getCount($str) {
+//   return preg_match_all('/[aeiou]/i', $str, $matche);
+// }
+
+// function getCount($str) {
+//
+//   $findLetters = ['a', 'e', 'i', 'o', 'u'];
+//   // enter your magic here
+//
+//   return sizeof(array_intersect(str_split($str), $findLetters));
+// }
+
+$answer =  getCount("abracadabra");
+print_r("$answer \n");
+
 ?>
