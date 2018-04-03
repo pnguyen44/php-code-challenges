@@ -15,8 +15,4 @@
 function remove(string $s): string {
   return rtrim($s, '!');
 }
-
-$answer =  remove("Hello!! myjinxin2015, my name is Don!!ald!!!");
-print_r("$answer \n");
-
 ?>
