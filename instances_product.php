@@ -14,6 +14,8 @@
 // Product("!!!???") == 9
 // Product("!???!!") == 9
 // Product("!????!!!?") == 20
-
+function product(string $s): int {
+  return substr_count($s,'!') * substr_count($s,'?');
+}
 
 ?>
