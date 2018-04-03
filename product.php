@@ -18,5 +18,11 @@ function grow($a) {
 $answer =  grow([1, 2, 3]);
 print_r("$answer \n");
 
-
+// Alternative Solutions:
+// function grow($a) {
+//
+//   if ( !empty($a) ) {
+//         return $result = array_product($a);
+//     }
+// }
 ?>
