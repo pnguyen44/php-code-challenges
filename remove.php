@@ -13,12 +13,10 @@
 // Note
 // Please don't post issue about difficulty or duplicate.
 function remove(string $s): string {
-  return strrev(ltrim(strrev($s),'!'));
+  return rtrim($s, '!');
 }
 
 $answer =  remove("Hello!! myjinxin2015, my name is Don!!ald!!!");
 print_r("$answer \n");
-
-
 
 ?>
