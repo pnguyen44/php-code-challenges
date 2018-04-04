@@ -14,7 +14,7 @@ function remove_end_mark($v) {
   return rtrim($v, '!');
 }
 
-function remove($s) {
+function remove(string $s): string {
   $arr = explode(' ',$s);
   $arr = array_map("remove_end_mark",$arr);
   return implode(' ', $arr);
