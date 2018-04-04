@@ -15,8 +15,7 @@ function remove_end_mark($v) {
 }
 
 function remove(string $s): string {
-  $arr = explode(' ',$s);
-  $arr = array_map("remove_end_mark",$arr);
+  $arr = array_map("remove_end_mark",explode(' ',$s));
   return implode(' ', $arr);
 }
   $answer =  remove("Hi! Hi!");
