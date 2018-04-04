@@ -10,6 +10,7 @@
 // remove("!Hi!") === "!Hi"
 // remove("Hi! Hi!") === "Hi Hi"
 // remove("!!!Hi !!hi!!! !hi") === "!!!Hi !!hi !hi"
+
 function remove_end_mark($v) {
   return rtrim($v, '!');
 }
@@ -18,6 +19,18 @@ function remove(string $s): string {
   $arr = array_map("remove_end_mark",explode(' ',$s));
   return implode(' ', $arr);
 }
+
+// Alternative Solution:
+//
+// function remove(string $s): string {
+//   $arr = explode(' ', $s);
+//   foreach($arr as &$val) {
+//     $val = rtrim($val, '!');
+//   }
+//   return implode(' ',$arr);
+// }
+
+
   $answer =  remove("Hi! Hi!");
 print_r("$answer \n");
 ?>
