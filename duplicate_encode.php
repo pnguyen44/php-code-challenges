@@ -11,4 +11,15 @@
 // "Success" => ")())())"
 //
 // "(( @" => "))(("
+
+function duplicate_encode($word){
+  $arr = str_split(strtolower($word));
+  foreach($arr as &$val) {
+    $val = substr_count(strtolower($word), $val) === 1 ? '(' : ')';
+  }
+  return implode('',$arr);
+}
+$answer =  duplicate_encode('UT1a3KlWjxTqw');
+print_r("$answer \n");
+
 ?>
