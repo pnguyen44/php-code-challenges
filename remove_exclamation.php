@@ -30,7 +30,4 @@ function remove(string $s): string {
 //   return implode(' ',$arr);
 // }
 
-
-  $answer =  remove("Hi! Hi!");
-print_r("$answer \n");
 ?>
