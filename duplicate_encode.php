@@ -19,7 +19,28 @@ function duplicate_encode($word){
   }
   return implode('',$arr);
 }
-$answer =  duplicate_encode('UT1a3KlWjxTqw');
-print_r("$answer \n");
 
+// Alternative Solutions:
+// function duplicate_encode($word){
+//   $word = str_split(strtolower($word));
+//   $str = "";
+//   foreach($word as $key){
+//     (count(array_keys($word,$key))>1) ? $str .= ")" : $str .= "(";
+//   }
+//   return $str;
+// }
+//
+// function duplicate_encode(string $word) : string
+// {
+//     $splittedWord = str_split(strtolower($word));
+//     $countMap = array_count_values($splittedWord);
+//
+//     $finalString = '';
+//
+//     foreach ($splittedWord as $letter) {
+//         ($countMap[$letter] === 1) ? $finalString .= '(' : $finalString .= ')';
+//     }
+//
+//     return $finalString;
+// }
 ?>
