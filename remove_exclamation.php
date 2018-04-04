@@ -10,5 +10,15 @@
 // remove("!Hi!") === "!Hi"
 // remove("Hi! Hi!") === "Hi Hi"
 // remove("!!!Hi !!hi!!! !hi") === "!!!Hi !!hi !hi"
+function remove_end_mark($v) {
+  return rtrim($v, '!');
+}
 
+function remove($s) {
+  $arr = explode(' ',$s);
+  $arr = array_map("remove_end_mark",$arr);
+  return implode(' ', $arr);
+}
+  $answer =  remove("Hi! Hi!");
+print_r("$answer \n");
 ?>
