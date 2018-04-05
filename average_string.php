@@ -6,7 +6,7 @@
 //
 // If the string is empty or includes a number greater than 9, return "n/a"
 
-function average_string($s) {
+function average_string(string $s): string {
   $nato = array(
       "0" => "zero",
       "1" => "one",
@@ -28,6 +28,11 @@ function average_string($s) {
   }
   return $s === "" ||  floor(array_sum($arr)/count($arr)) > 9 ? "n/a": $nato[floor(array_sum($arr)/count($arr))];
 }
+
+// Alternative Solutions:
+// function average_string(string $s): string {
+//   return !preg_match('/^(zero|one|two|three|four|five|six|seven|eight|nine)( (zero|one|two|three|four|five|six|seven|eight|nine))*$/', $s) ? 'n/a' : ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'][intdiv(array_reduce($a = explode(' ', $s), function ($s, $w) {return $s + ['zero' => 0, 'one' => 1, 'two' => 2, 'three' => 3, 'four' => 4, 'five' => 5, 'six' => 6, 'seven' => 7, 'eight' => 8, 'nine' => 9][$w];}, 0), count($a))];
+// }
 
 $answer =  average_string("zero nine five two");
 print_r("$answer \n");
