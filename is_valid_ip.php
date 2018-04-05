@@ -23,4 +23,11 @@ function isValidIP(string $str): bool {
   });
   return count($valid_num) === 4 ? true : false;
 }
+
+// Alternative Solution:
+// function isValidIP(string $str): bool
+// {
+//     return filter_var($str, FILTER_VALIDATE_IP);
+// }
+
 ?>
