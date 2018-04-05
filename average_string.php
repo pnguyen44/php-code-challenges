@@ -34,6 +34,14 @@ function average_string(string $s): string {
 //   return !preg_match('/^(zero|one|two|three|four|five|six|seven|eight|nine)( (zero|one|two|three|four|five|six|seven|eight|nine))*$/', $s) ? 'n/a' : ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'][intdiv(array_reduce($a = explode(' ', $s), function ($s, $w) {return $s + ['zero' => 0, 'one' => 1, 'two' => 2, 'three' => 3, 'four' => 4, 'five' => 5, 'six' => 6, 'seven' => 7, 'eight' => 8, 'nine' => 9][$w];}, 0), count($a))];
 // }
 
+// function average_string(string $s): string {
+//     $arr = explode(" ", $s);
+//     $numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+//     if(count(array_diff($arr, $numbers))) return "n/a";
+//     $sum = array_reduce($arr, function($carry, $item) use($numbers) { return $carry += array_search($item, $numbers); }, 0);
+//     return $numbers[($sum / count($arr))];
+// }
+
 $answer =  average_string("zero nine five two");
 print_r("$answer \n");
 ?>
