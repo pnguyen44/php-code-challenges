@@ -13,13 +13,18 @@
 // ['O','Q','R','S'] -> 'P'
 // (Use the English alphabet with 26 letters!)
 
+// function find_missing_letter(array $array): string {
+//   if (ctype_upper(implode('',$array))) {
+//     $alph = str_split(strtoupper('abcdefghijklmnopqrstuvwxyz'));
+//   } else {
+//     $alph = str_split('abcdefghijklmnopqrstuvwxyz');
+//   }
+//  return implode('', array_diff(array_slice($alph, array_search($array[0], $alph), count($array) + 1), $array));
+// }
+
 function find_missing_letter(array $array): string {
-  if (ctype_upper(implode('',$array))) {
-    $alph = str_split(strtoupper('abcdefghijklmnopqrstuvwxyz'));
-  } else {
-    $alph = str_split('abcdefghijklmnopqrstuvwxyz');
-  }
- return implode('', array_diff(array_slice($alph, array_search($array[0], $alph), count($array) + 1), $array));
+  $alph = range($array[0], $array[count($array) - 1]);
+  return array_values(array_diff($alph, $array))[0];
 }
 
 $answer =  find_missing_letter(["O", "Q", "R", "S"]);
