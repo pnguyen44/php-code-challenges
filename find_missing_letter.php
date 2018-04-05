@@ -27,6 +27,12 @@ function find_missing_letter(array $array): string {
   return array_values(array_diff($alph, $array))[0];
 }
 
+// Alternative Solution:
+// function find_missing_letter(array $array): string {
+//   $letter = range(reset($array),end($array));
+//   return current(array_diff($letter, $array));
+// }
+
 $answer =  find_missing_letter(["O", "Q", "R", "S"]);
 print_r("$answer \n");
 ?>
