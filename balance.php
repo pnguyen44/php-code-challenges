@@ -19,6 +19,13 @@ function balance(string $l, string $r): string {
   return  $l === $r ? 'Balance' : ($l > $r ? 'Left' : 'Right');
 }
 
+// Alternative Solution:
+// function balance(string $l, string $r): string {
+//   $a = substr_count($l, "!")*2+substr_count($l, "?")*3;
+//   $b = substr_count($r, "!")*2+substr_count($r, "?")*3;
+//   if ($a == $b) return "Balance"; elseif ($a < $b) return "Right"; else return "Left";
+// }
+
 $answer =  balance("!!", "??");
 print_r("$answer \n");
 ?>
