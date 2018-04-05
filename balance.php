@@ -12,16 +12,11 @@
 // balance("!!???!????","??!!?!!!!!!!") == "Balance"
 // Note
 // Please don't post issue about difficulty or duplicate.
+
 function balance(string $l, string $r): string {
   $l = array_sum(preg_replace(['/[!]/', '/[?]/'], [2,3], str_split($l)));
   $r = array_sum(preg_replace(['/[!]/', '/[?]/'], [2,3], str_split($r)));
-  if ($l === $r) {
-    return 'Balance';
-  } else if ($r > $l) {
-    return 'Right';
-  } else {
-    return 'Left';
-  }
+  return  $l === $r ? 'Balance' : ($l > $r ? 'Left' : 'Right');
 }
 
 $answer =  balance("!!", "??");
