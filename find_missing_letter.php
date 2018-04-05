@@ -12,4 +12,16 @@
 // ['a','b','c','d','f'] -> 'e'
 // ['O','Q','R','S'] -> 'P'
 // (Use the English alphabet with 26 letters!)
+
+function find_missing_letter(array $array): string {
+  if (ctype_upper(implode('',$array))) {
+    $alph = str_split(strtoupper('abcdefghijklmnopqrstuvwxyz'));
+  } else {
+    $alph = str_split('abcdefghijklmnopqrstuvwxyz');
+  }
+ return implode('', array_diff(array_slice($alph, array_search($array[0], $alph), count($array) + 1), $array));
+}
+
+$answer =  find_missing_letter(["O", "Q", "R", "S"]);
+print_r("$answer \n");
 ?>
