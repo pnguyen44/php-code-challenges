@@ -15,4 +15,12 @@
 // 123.456.78.90
 // 123.045.067.089
 // Note: leading zeros (e.g. 01.02.03.04) are considered not valid in this kata!
+
+function isValidIP(string $str): bool {
+  $arr = explode(".", $str);
+  $valid_num = array_filter($arr, function($n) {
+    return is_numeric($n) && intval($n) <= 255 && preg_match('/\s/', $n) === 0;
+  });
+  return count($valid_num) === 4 ? true : false;
+}
 ?>
