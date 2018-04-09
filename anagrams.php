@@ -14,4 +14,24 @@
 // anagrams('racer', ['crazer', 'carer', 'racar', 'caers', 'racer']); // => ['carer', 'racer']
 //
 // anagrams('laser', ['lazing', 'lazy',  'lacer']); // => []
+
+function anagrams(string $word, array $words): array {
+    $a = str_split($word);
+    sort($a);
+    $match = implode('', $a);
+    $result = [];
+    foreach($words as $w) {
+        $a = str_split($w);
+        sort($a);
+        $test = implode('',$a);
+        if ($test === $match) {
+          $result[] = $w ;
+        }
+    }
+    return $result;
+}
+
+$answer =  anagrams('racer', ['carer', 'arcre', 'carre', 'racrs', 'racers', 'arceer', 'raccer', 'carrer', 'cerarr']);
+print_r("$answer \n");
+
 ?>
