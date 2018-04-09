@@ -50,9 +50,4 @@ function anagrams(string $word, array $words): array {
 // return $res;
 // }
 
-
-
-$answer =  anagrams('racer', ['carer', 'arcre', 'carre', 'racrs', 'racers', 'arceer', 'raccer', 'carrer', 'cerarr']);
-print_r("$answer \n");
-
 ?>
