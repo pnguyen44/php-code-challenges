@@ -38,6 +38,18 @@ function anagrams(string $word, array $words): array {
 //     }));
 // }
 
+// function anagrams(string $word, array $words): array {
+// $char = count_chars($word, 1);
+// $res = [];
+//
+// foreach($words as $elem){
+//   if(count_chars($elem, 1) == $char){
+//     $res[] = $elem;
+//   }
+// }
+// return $res;
+// }
+
 
 
 $answer =  anagrams('racer', ['carer', 'arcre', 'carre', 'racrs', 'racers', 'arceer', 'raccer', 'carrer', 'cerarr']);
