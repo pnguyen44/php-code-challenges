@@ -18,13 +18,8 @@
 
 
 function getLengthOfMissingArray($arrayOfArrays) {
-    if(empty($arrayOfArrays)) return 0;
-    $result = array_map(function($a) {
-      return count($a);
-    }, $arrayOfArrays);
-    sort($result);
-    if($result[0] === 0) return 0;
-    return array_values(array_diff(range($result[0],$result[count($result) - 1]), $result))[0];
+    if(empty($arrayOfArrays)|| in_array(0,$count_arr = array_map('count', $arrayOfArrays))) return 0;
+    return array_values(array_diff(range(min($count_arr),max($count_arr)), $count_arr))[0];
 };
 
 $answer =  getLengthOfMissingArray([[5,5],[],[27,9,35]]);
