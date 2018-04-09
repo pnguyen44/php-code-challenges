@@ -18,12 +18,12 @@
 function anagrams(string $word, array $words): array {
     $a = str_split($word);
     sort($a);
-    $match = implode('', $a);
+    $match = implode($a);
     $result = [];
     foreach($words as $w) {
         $a = str_split($w);
         sort($a);
-        $test = implode('',$a);
+        $test = implode($a);
         if ($test === $match) {
           $result[] = $w ;
         }
