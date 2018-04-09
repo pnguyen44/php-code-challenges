@@ -15,4 +15,19 @@
 //
 // When an array in the array is null or empty, the method should return 0 too!
 // There will always be a missing element and its length will be always between the given arrays.
+
+
+function getLengthOfMissingArray($arrayOfArrays) {
+    if(empty($arrayOfArrays)) return 0;
+    $result = array_map(function($a) {
+      return count($a);
+    }, $arrayOfArrays);
+    sort($result);
+    if($result[0] === 0) return 0;
+    return array_values(array_diff(range($result[0],$result[count($result) - 1]), $result))[0];
+};
+
+$answer =  getLengthOfMissingArray([[5,5],[],[27,9,35]]);
+print_r("$answer \n");
+
 ?>
