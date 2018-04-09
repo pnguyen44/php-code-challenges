@@ -28,6 +28,17 @@ function anagrams(string $word, array $words): array {
     return $result;
 }
 
+// Alternative Solution:
+//
+// function anagrams(string $word, array $words): array {
+//     $sorted = function($word) { $a = str_split($word); sort($a); return implode($a);};
+//     $match = $sorted($word);
+//     return array_values(array_filter($words, function($w) use($match,$sorted){
+//       return $sorted($w) === $match;
+//     }));
+// }
+
+
 
 $answer =  anagrams('racer', ['carer', 'arcre', 'carre', 'racrs', 'racers', 'arceer', 'raccer', 'carrer', 'cerarr']);
 print_r("$answer \n");
