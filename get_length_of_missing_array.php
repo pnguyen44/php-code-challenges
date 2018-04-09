@@ -27,8 +27,4 @@ function getLengthOfMissingArray($arrayOfArrays) {
 //     if ( empty( $arrayOfArrays ) || in_array(0, $counts = array_map('count', $arrayOfArrays) ) ) return 0;
 //     return min(array_diff(range(min($counts),max($counts)), $counts));
 // }
-
-$answer =  getLengthOfMissingArray([[5,5],[],[27,9,35]]);
-print_r("$answer \n");
-
 ?>
