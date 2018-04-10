@@ -29,4 +29,20 @@
 // Note:
 // If you are given an array with multiple answers, return the lowest correct index.
 // An empty array should be treated like a 0 in this problem.
+
+function find_even_index($arr){
+  $result = [];
+  for($i = 0; $i < count($arr); $i++) {
+    $l = $i === count($arr) -1  ? 0 : array_sum(array_slice($arr,$i + 1));
+    $r = $i === 0  ? 0 : array_sum(array_slice($arr, 0, $i));
+    if ($r === $l) {
+       $result[] = $i;
+    }
+  }
+  return count($result) <= 0 ? -1 : min($result);
+}
+
+$answer =  find_even_index(array(1,2,3,4,3,2,1));
+print_r("$answer \n");
+
 ?>
