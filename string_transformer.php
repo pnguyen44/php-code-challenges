@@ -21,6 +21,4 @@ function string_transformer(string $s): string {
 //    return implode(' ',array_reverse(explode(' ',strtolower($str) ^ strtoupper($str) ^ $str)));
 // }
 
-$answer =  string_transformer("Example string");
-print_r("$answer \n");
 ?>
