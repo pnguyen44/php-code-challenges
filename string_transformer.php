@@ -9,4 +9,20 @@
 //
 // You may assume the input only contain English alphabet and spaces.
 
+function string_transformer(string $s): string {
+  $print = array_map(function($word) {
+    $word = array_map(function($l) {
+      if (strtoupper($l) === $l) {
+        return strtolower($l);
+      } else {
+        return strtoupper($l);
+      }
+    }, str_split($word));
+    return implode($word);
+  }, array_reverse(explode(' ', $s)));
+  return implode(' ' , $print);
+}
+
+$answer =  string_transformer("Example string");
+print_r("$answer \n");
 ?>
