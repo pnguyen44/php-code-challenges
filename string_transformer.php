@@ -16,6 +16,11 @@ function string_transformer(string $s): string {
   return  implode(' ', array_reverse(explode(' ', implode($result))));
 }
 
+// Alternative Solution:
+// function string_transformer(string $str): string {
+//    return implode(' ',array_reverse(explode(' ',strtolower($str) ^ strtoupper($str) ^ $str)));
+// }
+
 $answer =  string_transformer("Example string");
 print_r("$answer \n");
 ?>
