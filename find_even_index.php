@@ -37,7 +37,4 @@ function find_even_index($arr){
   return -1;
 }
 
-$answer =  find_even_index(array(1,2,3,4,3,2,1));
-print_r("$answer \n");
-
 ?>
