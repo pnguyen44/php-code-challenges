@@ -12,6 +12,17 @@ function findIt(array $seq) : int {
     return array_keys($result)[0];
   }
 
+// Alternative Solution:
+// function findIt(array $seq) : int {
+//     $nums = array_count_values($seq);
+//     foreach ($nums as $key => $val) {
+//       if ($val % 2) {
+//         return $key;
+//       }
+//     }
+// }
+
+
 $answer =  findIt([1,1,1,1,1,1,10,1,1,1,1]);
 print_r("$answer \n");
 ?>
