@@ -22,7 +22,4 @@ function findIt(array $seq) : int {
 //     }
 // }
 
-
-$answer =  findIt([1,1,1,1,1,1,10,1,1,1,1]);
-print_r("$answer \n");
 ?>
