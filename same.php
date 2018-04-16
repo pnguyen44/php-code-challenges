@@ -13,14 +13,9 @@
 // 100 randomly generated tests that can contains either "same" or "not same" arrays.
 
 function same($aArr, $bArr) {
-  if (count($aArr) !== 0 && count($bArr !== 0)) {
-    $result = array_diff(array_merge(... $aArr), array_merge(... $bArr));
-    return count($result) === 0 ? true : false;
-  } else if (count($aArr) === 0 && count($bArr) === 0) {
-    return true;
-  } else {
-    return false;
-  }
+  if (empty($aArr) && empty($bArr)) return true;
+  $diff = array_diff(array_merge(... $aArr), array_merge(... $bArr));
+  return count($diff) === 0 ? true : false;
 }
 
 $answer = same([[2,5], [3,5], [6,2]], [[3,5], [6,2], [5,2]]);
