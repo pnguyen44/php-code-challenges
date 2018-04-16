@@ -18,7 +18,7 @@ function same($aArr, $bArr) {
   return count($diff) === 0 ? true : false;
 }
 
-// Alternative solution:
+// Alternative solutions:
 // function same($aArr, $bArr) {
 //
 //   $aArr= array_reduce($aArr, 'array_merge', []);
@@ -28,6 +28,39 @@ function same($aArr, $bArr) {
 //   sort($bArr);
 //
 //   return $aArr == $bArr;
+// }
+
+// function same($aArr, $bArr) {
+//   if (empty($aArr) && empty($bArr)) return true;
+//
+//   $sumA = array_map(function(&$x) {
+//     $x = $x[0] + $x[1];
+//     return $x;
+//   }, $aArr);
+//
+//   $sumB = array_map(function(&$x) {
+//     $x = $x[0] + $x[1];
+//     return $x;
+//   }, $bArr);
+//
+//   sort($sumA);
+//   sort($sumB);
+//
+//   return $sumA === $sumB;
+// }
+
+// function same($aArr, $bArr): bool {
+//   foreach($aArr as $a) {
+//     $contained = false;
+//     foreach($bArr as $b) {
+//       if(!array_diff($a, $b)) {
+//         $contained = true;
+//       }
+//     }
+//     if(!$contained) return false;
+//   }
+//
+//   return true;
 // }
 
 $answer = same([[2,5], [3,5], [6,2]], [[3,5], [6,2], [5,2]]);
