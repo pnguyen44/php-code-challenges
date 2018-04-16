@@ -63,7 +63,5 @@ function same($aArr, $bArr) {
 //   return true;
 // }
 
-$answer = same([[2,5], [3,5], [6,2]], [[3,5], [6,2], [5,2]]);
-print_r("$answer \n");
 
 ?>
