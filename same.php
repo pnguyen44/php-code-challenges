@@ -18,6 +18,18 @@ function same($aArr, $bArr) {
   return count($diff) === 0 ? true : false;
 }
 
+// Alternative solution:
+// function same($aArr, $bArr) {
+//
+//   $aArr= array_reduce($aArr, 'array_merge', []);
+//   $bArr= array_reduce($bArr, 'array_merge', []);
+//
+//   sort($aArr);
+//   sort($bArr);
+//
+//   return $aArr == $bArr;
+// }
+
 $answer = same([[2,5], [3,5], [6,2]], [[3,5], [6,2], [5,2]]);
 print_r("$answer \n");
 
