@@ -31,7 +31,16 @@ function group(array $arr) {
 //     return array_values($map);
 // }
 
-
+// function group(array $arr) {
+//   $all = [];
+//
+//  foreach ($arr as $v) {
+//     isset($all[$v]) ?: $all[$v] = [];
+//     $all[$v][] = $v;
+//   }
+//
+//   return array_values($all);
+// }
 
 $answer = group([2, 3, 6, 2, 1, 3]);
 print_r("$answer \n");
