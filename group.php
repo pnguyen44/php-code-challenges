@@ -19,6 +19,20 @@ function group(array $arr) {
   return $result;
 }
 
+// Alternative Solution:
+// function group(array $numbers)
+// {
+//     $map = array_fill_keys($numbers, []);
+//
+//     foreach ($numbers as $number) {
+//         $map[$number][] = $number;
+//     }
+//
+//     return array_values($map);
+// }
+
+
+
 $answer = group([2, 3, 6, 2, 1, 3]);
 print_r("$answer \n");
 ?>
