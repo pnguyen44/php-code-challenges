@@ -7,4 +7,18 @@
 // group([3, 2, 6, 2, 1, 3])
 // >>> [[3, 3], [2, 2], [6], [1]]
 // Assume the input is always going to be an array of numbers. If the input is an empty array, an empty array should be returned.
+
+function group(array $arr) {
+  $unique  = array_unique($arr);
+  $result = [];
+  foreach($unique as $n) {
+    $result[] = array_values(array_filter($arr, function($x) use($n) {
+      return $x === $n;
+    }));
+  }
+  return $result;
+}
+
+$answer = group([2, 3, 6, 2, 1, 3]);
+print_r("$answer \n");
 ?>
