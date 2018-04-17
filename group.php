@@ -19,7 +19,7 @@ function group(array $arr) {
   return $result;
 }
 
-// Alternative Solution:
+// Alternative Solutions:
 // function group(array $numbers)
 // {
 //     $map = array_fill_keys($numbers, []);
@@ -42,6 +42,4 @@ function group(array $arr) {
 //   return array_values($all);
 // }
 
-$answer = group([2, 3, 6, 2, 1, 3]);
-print_r("$answer \n");
 ?>
