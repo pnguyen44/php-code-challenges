@@ -15,6 +15,10 @@ function sum_of_integers_in_string(string $s): int {
 //
 // }
 
+// function sum_of_integers_in_string(string $s): int {
+//   return array_sum(preg_split("@[^\d]@",$s));
+// }
+
 $answer = sum_of_integers_in_string("1dfdsf2.4");
 print_r("$answer \n");
 ?>
