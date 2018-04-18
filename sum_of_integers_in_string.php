@@ -8,7 +8,7 @@ function sum_of_integers_in_string(string $s): int {
     return array_sum(explode(' ', preg_replace('/[a-z]+/i', ' ', $s)));
 }
 
-// Alternative solution:
+// Alternative solutions:
 // function sum_of_integers_in_string(string $s): int {
 //     preg_match_all('/(\d)+/',$s,$arrayMatch);
 //     return array_sum($arrayMatch[0]);
@@ -19,6 +19,4 @@ function sum_of_integers_in_string(string $s): int {
 //   return array_sum(preg_split("@[^\d]@",$s));
 // }
 
-$answer = sum_of_integers_in_string("1dfdsf2.4");
-print_r("$answer \n");
 ?>
