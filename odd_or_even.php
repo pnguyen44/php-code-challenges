@@ -16,7 +16,4 @@ function odd_or_even(array $a): string {
   return array_sum($a) % 2 === 0 ? 'even' : 'odd';
 }
 
-$answer = odd_or_even([2, 5, 34, 6]);
-print_r("$answer \n");
-
 ?>
