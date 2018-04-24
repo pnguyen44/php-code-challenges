@@ -11,4 +11,12 @@
 // odd_or_even([0]); // => 'even'
 // odd_or_even([2, 5, 34, 6]); // => 'odd'
 // odd_or_even([0, -1, -5]); // => 'even'
+
+function odd_or_even(array $a): string {
+  return array_sum($a) % 2 === 0 || array_sum($a) === 0 ? 'even' : 'odd';
+}
+
+$answer = odd_or_even([2, 5, 34, 6]);
+print_r("$answer \n");
+
 ?>
