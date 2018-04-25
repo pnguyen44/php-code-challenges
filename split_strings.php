@@ -13,6 +13,14 @@ function solution($str) {
   return explode(' ', wordwrap($str, 2, ' ', true));
 }
 
+// Alternative Solution:
+// function solution($str) {
+//   if (strlen($str) % 2 != 0){
+//     $str .= "_";
+//   }
+//   return str_split($str, 2);
+// }
+
 $answer = solution('abc');
 print_r("$answer \n");
 ?>
