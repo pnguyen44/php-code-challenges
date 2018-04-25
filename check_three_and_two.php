@@ -6,4 +6,20 @@
 // ["a", "a", "a", "b", "b"] ==> true  // 3x "a" and 2x "b"
 // ["a", "b", "c", "b", "c"] ==> false // 1x "a", 2x "b" and 2x "c"
 // ["a", "a", "a", "a", "a"] ==> false // 5x "a"
+
+function checkThreeAndTwo($arr) {
+  $unique = array_unique($arr);
+  foreach($unique as $l) {
+    $count = count(array_filter($arr, function($x) use($l){
+      return $x ===$l;
+    }));
+    print_r($count);
+    if ($count !== 2 && $count !== 3) return false;
+  }
+  return true;
+}
+
+$answer = checkThreeAndTwo(array('a', 'a', 'a', 'b', 'b'));
+print_r("$answer \n");
+
 ?>
