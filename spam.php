@@ -11,7 +11,5 @@
 function spam(int $n): string {
   return str_repeat('hue', $n);
 }
-$answer =spam(2);
-print_r("$answer \n");
 
 ?>
