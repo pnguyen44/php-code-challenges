@@ -21,11 +21,9 @@
 // For this kata, you are not required to allocate or de-allocate any memory.
 
 function reverser(string $sentence): string {
-  $arr = explode(' ', $sentence);
-  return implode(' ', array_map(function($w) {
-    return strrev($w);
-  }, $arr));
+  return implode(' ', array_map('strrev', explode(' ', $sentence)));
 }
+
 $answer = reverser("A fun little challenge");
 print_r("$answer \n");
 ?>
