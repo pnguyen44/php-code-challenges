@@ -14,6 +14,11 @@ function camel_case(string $s): string {
   return implode('', $result);
 }
 
+// Alternative solution:
+// function camel_case(string $s): string {
+//   return str_replace(' ', '', ucwords(trim($s)));
+// }
+
 $answer = camel_case("hello case");
 print_r("$answer \n");
 
