@@ -8,10 +8,7 @@
 // camel_case("camel case word"); // => "CamelCaseWord"
 
 function camel_case(string $s): string {
-  $result = array_map(function($w) {
-    return ucfirst($w);
-  }, explode(' ', $s));
-  return implode('', $result);
+  return implode(array_map('ucfirst', explode(' ', trim($s))));
 }
 
 // Alternative solution:
