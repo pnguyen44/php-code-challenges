@@ -24,6 +24,4 @@ function reverser(string $sentence): string {
   return implode(' ', array_map('strrev', explode(' ', $sentence)));
 }
 
-$answer = reverser("A fun little challenge");
-print_r("$answer \n");
 ?>
