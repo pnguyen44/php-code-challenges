@@ -20,4 +20,19 @@ function word_value(array $a): array {
    return $result;
 }
 
+// Alternative Solution:
+// function word_value(array $a): array {
+//   $i=1;
+//   foreach($a as $b){
+//     $arr = str_split($b);
+//     $nb=0;
+//     foreach($arr as $c){
+//       if(ord($c)>=97) $nb += ord($c)-96;
+//     }
+//     $sort[]=$nb*$i;
+//     $i++;
+//   }
+//   return $sort;
+// }
+
 ?>
