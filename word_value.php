@@ -10,15 +10,11 @@
 //
 // Input will only contain lowercase characters and spaces.
 
-// function word_value(array $a): array {
-  function word_value($a) {
+function word_value(array $a): array {
   $result = [];
   foreach($a as $key => $val) {
-      $x =  array_reduce(str_split($val), function($carry, $letter) {
-        if($letter !== ' ') {
-          $carry +=  (ord(strtoupper($letter)) - 64);
-        }
-        return $carry;
+      $x =  array_reduce(str_split(str_replace(' ', '', $val)), function($carry, $letter) {
+          return $carry +=  (ord(strtoupper($letter)) - 64);
       });
       $result[] = $x * ($key + 1);
   }
