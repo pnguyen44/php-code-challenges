@@ -11,7 +11,6 @@
 // Input will only contain lowercase characters and spaces.
 
 function word_value(array $a): array {
-  $result = [];
   foreach($a as $key => $val) {
       $x =  array_reduce(str_split(str_replace(' ', '', $val)), function($carry, $letter) {
           return $carry +=  (ord(strtoupper($letter)) - 64);
@@ -21,6 +20,4 @@ function word_value(array $a): array {
    return $result;
 }
 
-$answer = word_value(["abc","abc abc"]);
-print_r("$answer \n");
 ?>
