@@ -20,7 +20,7 @@ function word_value(array $a): array {
    return $result;
 }
 
-// Alternative Solution:
+// Alternative Solutions:
 // function word_value(array $a): array {
 //   $i=1;
 //   foreach($a as $b){
@@ -33,6 +33,16 @@ function word_value(array $a): array {
 //     $i++;
 //   }
 //   return $sort;
+// }
+
+// function word_value(array $a): array {
+//   foreach($a as $key => $str) {
+//     foreach(str_split(str_replace(' ', '', $str)) as $char) {
+//       $res[$key][] = array_search($char, range('a', 'z')) + 1;
+//     }
+//     $res[$key] = array_sum($res[$key]) * ($key + 1);
+//   }
+//   return $res;
 // }
 
 ?>
