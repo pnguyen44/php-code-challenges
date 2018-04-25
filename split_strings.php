@@ -21,6 +21,4 @@ function solution($str) {
 //   return str_split($str, 2);
 // }
 
-$answer = solution('abc');
-print_r("$answer \n");
 ?>
