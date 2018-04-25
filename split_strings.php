@@ -10,10 +10,9 @@ function solution($str) {
   if (strlen($str) % 2 !== 0) {
     $str .= "_";
   }
-  $result = explode(' ', wordwrap($str, 2, ' ', true));
-  print_r($result);
-  return $result;
+  return explode(' ', wordwrap($str, 2, ' ', true));
 }
+
 $answer = solution('abc');
 print_r("$answer \n");
 ?>
