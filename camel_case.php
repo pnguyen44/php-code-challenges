@@ -6,4 +6,16 @@
 //
 // camel_case("hello case"); // => "HelloCase"
 // camel_case("camel case word"); // => "CamelCaseWord"
+
+function camel_case(string $s): string {
+  $result = array_map(function($w) {
+    return ucfirst($w);
+  }, explode(' ', $s));
+  return implode('', $result);
+}
+
+$answer = camel_case("hello case");
+print_r("$answer \n");
+
+
 ?>
