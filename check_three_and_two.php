@@ -18,4 +18,9 @@ function checkThreeAndTwo($arr) {
   return true;
 }
 
+// Alternative Solution:
+// function checkThreeAndTwo($arr) {
+//   $counts = array_count_values($arr);
+//   return count($counts) === 2 && max($counts) === 3;
+// }
 ?>
