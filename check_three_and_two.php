@@ -13,13 +13,9 @@ function checkThreeAndTwo($arr) {
     $count = count(array_filter($arr, function($x) use($l){
       return $x ===$l;
     }));
-    print_r($count);
     if ($count !== 2 && $count !== 3) return false;
   }
   return true;
 }
-
-$answer = checkThreeAndTwo(array('a', 'a', 'a', 'b', 'b'));
-print_r("$answer \n");
 
 ?>
