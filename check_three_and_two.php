@@ -18,9 +18,13 @@ function checkThreeAndTwo($arr) {
   return true;
 }
 
-// Alternative Solution:
+// Alternative Solutions:
 // function checkThreeAndTwo($arr) {
 //   $counts = array_count_values($arr);
 //   return count($counts) === 2 && max($counts) === 3;
+// }
+
+// function checkThreeAndTwo($arr) {
+//   return empty(array_diff(array(2, 3), array_count_values($arr)));
 // }
 ?>
