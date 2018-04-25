@@ -9,4 +9,22 @@
 // "abc" has a value of 6, while "abc abc" has a value of 12. Now, the value at position 1 is multiplied by 1 while the value at position 2 is multiplied by 2.
 //
 // Input will only contain lowercase characters and spaces.
+
+// function word_value(array $a): array {
+  function word_value($a) {
+  $result = [];
+  foreach($a as $key => $val) {
+      $x =  array_reduce(str_split($val), function($carry, $letter) {
+        if($letter !== ' ') {
+          $carry +=  (ord(strtoupper($letter)) - 64);
+        }
+        return $carry;
+      });
+      $result[] = $x * ($key + 1);
+  }
+   return $result;
+}
+
+$answer = word_value(["abc","abc abc"]);
+print_r("$answer \n");
 ?>
