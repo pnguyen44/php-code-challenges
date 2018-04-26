@@ -20,18 +20,16 @@
 // myFile.tar
 // The recommend way to solve it is using RegEx and specifically groups.
 
-// function fileNameExtractor(string $dirtyFileName): string {
-//   $start = ltrim(strchr($dirtyFileName, '_'),'_');
-//   $result = explode('.', $start);
-//   $remove = array_pop($result);
-//   return implode('.', $result);
-// }
+function fileNameExtractor(string $dirtyFileName): string {
+  $result = explode('.', ltrim(strchr($dirtyFileName, '_'),'_'));
+  return implode('.',array_slice($result, 0, 2));
+}
 
 // Alternative Solution:
-function fileNameExtractor(string $dirtyFileName): string {
-    $nm3 = explode (".", preg_replace("/[0-9]+_/", "", $dirtyFileName));
-    return $nm3[0].'.'.$nm3[1];
-}
+// function fileNameExtractor(string $dirtyFileName): string {
+//     $nm3 = explode (".", preg_replace("/[0-9]+_/", "", $dirtyFileName));
+//     return $nm3[0].'.'.$nm3[1];
+// }
 
 
 $answer = fileNameExtractor("1231231223123131_FILE_NAME.EXTENSION.OTHEREXTENSION");
