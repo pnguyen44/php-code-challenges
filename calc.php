@@ -21,6 +21,12 @@ function calc($s) {
   $result2 = str_split(str_replace('7', '1', implode($result)));
   return array_sum($result) - array_sum($result2);
 }
+
+// Alternative Solution:
+// function calc($s) {
+//    return substr_count(join(array_map('ord', str_split($s))), '7') * 6;
+// }
+
 $answer = calc('ABC');
 print_r("$answer \n");
 ?>
