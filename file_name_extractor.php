@@ -31,8 +31,4 @@ function fileNameExtractor(string $dirtyFileName): string {
 //     return $nm3[0].'.'.$nm3[1];
 // }
 
-
-$answer = fileNameExtractor("1231231223123131_FILE_NAME.EXTENSION.OTHEREXTENSION");
-print_r("$answer \n")
-
 ?>
