@@ -20,7 +20,7 @@ function scramble($str,$arr){
   return implode($result);
 }
 
-// Alternative Solution:
+// Alternative Solutions:
 // function scramble($str, $arr) {
 //   $newStr = $str;
 //   for ($i = 0; $i < strlen($str); $i++) {
@@ -34,9 +34,5 @@ function scramble($str,$arr){
 //  ksort($a);
 //  return implode('', $a);
 // }
-
-$answer = scramble('abcd', [0,3,1,2]) ;
-print_r("$answer \n");
-
 
 ?>
