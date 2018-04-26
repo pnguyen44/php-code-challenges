@@ -9,9 +9,8 @@
 // The tests contain some very huge arrays, so think about performance.
 
 function find_uniq($a) {
-  $a = array_map('strval', $a);
-  $result = array_search(1, array_count_values($a));
-  return $result;
+  sort($a);
+  return $a[0] === $a[1] ?  $a[count($a) -1] : $a[0]; 
 }
 
 $answer = find_uniq([0, 0, 0.55, 0, 0]);
