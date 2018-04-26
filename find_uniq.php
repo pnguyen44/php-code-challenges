@@ -7,4 +7,14 @@
 // It’s guaranteed that array contains more than 3 numbers.
 //
 // The tests contain some very huge arrays, so think about performance.
+
+function find_uniq($a) {
+  $a = array_map('strval', $a);
+  $result = array_search(1, array_count_values($a));
+  return $result;
+}
+
+$answer = find_uniq([0, 0, 0.55, 0, 0]);
+print_r("$answer \n");
+
 ?>
