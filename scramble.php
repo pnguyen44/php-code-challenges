@@ -29,6 +29,12 @@ function scramble($str,$arr){
 //   return $newStr;
 // }
 
+// function scramble($str,$arr){
+//  $a = array_combine($arr,str_split($str));
+//  ksort($a);
+//  return implode('', $a);
+// }
+
 $answer = scramble('abcd', [0,3,1,2]) ;
 print_r("$answer \n");
 
