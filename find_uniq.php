@@ -19,7 +19,4 @@ function find_uniq($a) {
 //   return ($a[0] === $a[1]) ? end($a) : current($a);
 // }
 
-$answer = find_uniq([0, 0, 0.55, 0, 0]);
-print_r("$answer \n");
-
 ?>
