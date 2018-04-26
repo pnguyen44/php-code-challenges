@@ -16,7 +16,7 @@ function dashatize(int $num): string {
   return str_replace('--', '-', rtrim(ltrim($result,'-'), '-'));
 }
 
-// Alternative Solution:
+// Alternative Solutions:
 // function dashatize(int $num): string {
 //   return trim(str_replace('--', '-', preg_replace('/([13579])/', '-$1-', $num)),'-');
 // }
@@ -24,8 +24,5 @@ function dashatize(int $num): string {
 // function dashatize(int $n): string {
 //   return preg_replace('/\-\-/', "-", preg_replace('/^\-+|\-+$/', "", implode(array_map(function ($d) {return $d % 2 ? "-$d-" : $d;}, str_split(strval($n))))));
 // }
-
-$answer = dashatize(6815);
-print_r("$answer \n");
 
 ?>
