@@ -11,4 +11,17 @@
 // In other words, put the first character in the string at the index described by the first element of the array
 //
 // You can assume that you will be given a string and array of equal length and both containing valid characters (A-Z, a-z, or 0-9).
+
+function scramble($str,$arr){
+  foreach($arr as $key => $val) {
+    $result[$val] = $str[$key];
+  }
+  ksort($result);
+  return implode($result);
+}
+
+$answer = scramble('abcd', [0,3,1,2]) ;
+print_r("$answer \n");
+
+
 ?>
