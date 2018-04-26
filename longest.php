@@ -9,6 +9,5 @@
 function longest($words) {
   return max(array_map('strlen', $words));
 }
-$answer = longest(['simple', 'is', 'better', 'than', 'complex']);
-print_r("$answer \n");
+
 ?>
