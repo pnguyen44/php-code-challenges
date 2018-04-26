@@ -10,8 +10,14 @@
 
 function find_uniq($a) {
   sort($a);
-  return $a[0] === $a[1] ?  $a[count($a) -1] : $a[0]; 
+  return $a[0] === $a[1] ?  $a[count($a) -1] : $a[0];
 }
+
+// Alternative Solution:
+// function find_uniq($a) {
+//   sort($a);
+//   return ($a[0] === $a[1]) ? end($a) : current($a);
+// }
 
 $answer = find_uniq([0, 0, 0.55, 0, 0]);
 print_r("$answer \n");
