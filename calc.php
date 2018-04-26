@@ -15,4 +15,14 @@
 // - (6 + 5 + 6 + 6 + 6 + 1)
 // -------------------------
 //                        6
+
+function calc($s) {
+  $arr = str_split($s);
+  $result = str_split(implode(array_map('ord',$arr)));
+  $result2 = str_split(str_replace('7', '1', implode($result)));
+  print_r($result);
+  return array_sum($result) - array_sum($result2);
+}
+$answer = calc('ABC');
+print_r("$answer \n");
 ?>
