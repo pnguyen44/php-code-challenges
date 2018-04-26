@@ -27,6 +27,4 @@ function calc($s) {
 //    return substr_count(join(array_map('ord', str_split($s))), '7') * 6;
 // }
 
-$answer = calc('ABC');
-print_r("$answer \n");
 ?>
