@@ -13,4 +13,14 @@
 // AS, 3S, 9S, KS, 4S  should return true
 //
 // AD, 4S, 7H, KS, 10S  should return False.
+
+function checkIfFlush($cards) {
+  $result = array_map(function($c) {
+    return substr($c,-1);
+  }, $cards);
+  return count(array_unique($result)) === 1 ? true : false;
+}
+
+$answer = checkIfFlush(["AS", "3S", "9S", "KS", "4S"]);
+print_r("$answer \n");
 ?>
