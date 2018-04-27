@@ -31,20 +31,10 @@
 // For word = "abitryz", the output should be false.
 
 function closed_bracket_word(string $word): bool {
-  $str1 = substr($word,0, strlen($word)/2);
-  $str2 = strrev(substr($word,strlen($word)/2));
-
-  if (strlen($word) % 2 !== 0) return false;
-
-  $str1 = implode(array_map(function($l) use ($str1){
-    return ord(strtoupper($l)) - 64;
-  }, str_split($str1)));
-
-  $str2 = implode(array_map(function($l) use ($str2){
-    return 27 - (ord(strtoupper($l)) - 64);
-  }, str_split($str2)));
-
-  return $str1 === $str2? true : false;
+  for($i = 0; $i < strlen($word); $i++) {
+    if (ord(strtoupper($word[$i])) - 64 != 27 - (ord(strtoupper($word[strlen($word) -1 - $i])) - 64)) return false;
+  }
+  return true;
 }
 
 $answer = closed_bracket_word("zhuazfsa");
