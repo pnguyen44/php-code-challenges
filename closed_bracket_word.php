@@ -37,7 +37,7 @@ function closed_bracket_word(string $word): bool {
   return true;
 }
 
-// Alternative solution:
+// Alternative solutions:
 // function closed_bracket_word(string $w): bool {
 //   $a = "abcdefghijklmnopqrstuvwxyz";
 //   for ($i = 0; $i < strlen($w); $i++) {
