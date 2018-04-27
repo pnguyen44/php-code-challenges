@@ -12,6 +12,5 @@ function rotate_to_max($n): int {
   rsort($result);
   return implode($result);
 }
-$answer = rotate_to_max(786);
-print_r("$answer \n");
+
 ?>
