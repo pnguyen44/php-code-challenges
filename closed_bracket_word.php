@@ -37,6 +37,15 @@ function closed_bracket_word(string $word): bool {
   return true;
 }
 
+// Alternative solution:
+// function closed_bracket_word(string $w): bool {
+//   $a = "abcdefghijklmnopqrstuvwxyz";
+//   for ($i = 0; $i < strlen($w); $i++) {
+//     if (strpos($a, $w[$i]) != 25-strpos($a, $w[strlen($w)-$i-1])) { return false; }
+//   }
+//   return true;
+// }
+
 $answer = closed_bracket_word("zhuazfsa");
 print_r("$answer \n");
 
