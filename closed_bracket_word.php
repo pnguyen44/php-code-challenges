@@ -46,7 +46,4 @@ function closed_bracket_word(string $word): bool {
 //   return true;
 // }
 
-$answer = closed_bracket_word("zhuazfsa");
-print_r("$answer \n");
-
 ?>
