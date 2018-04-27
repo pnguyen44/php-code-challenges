@@ -21,6 +21,15 @@ function checkIfFlush($cards) {
   return count(array_unique($result)) === 1 ? true : false;
 }
 
+// Alternative Solution:
+// function checkIfFlush($cards)
+// {
+//   foreach ($cards as &$value) {
+//     $value = ltrim($value, '0123456789JQKA');
+//   }
+//   return 1==count(array_unique($cards));
+// }
+
 $answer = checkIfFlush(["AS", "3S", "9S", "KS", "4S"]);
 print_r("$answer \n");
 ?>
