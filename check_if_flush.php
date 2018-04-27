@@ -39,6 +39,4 @@ function checkIfFlush($cards) {
 //   return true;
 // }
 
-$answer = checkIfFlush(["AS", "3S", "9S", "KS", "4S"]);
-print_r("$answer \n");
 ?>
