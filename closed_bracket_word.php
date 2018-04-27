@@ -46,4 +46,14 @@ function closed_bracket_word(string $word): bool {
 //   return true;
 // }
 
+// function closed_bracket_word(string $word): bool {
+//   $al = str_split('abcdefghijklmnopqrstuvwxyz');
+//   $total = 1;
+//   $word = str_split($word);
+//   for($i = 0; $i < count($word)/2; $i++) {
+//      if($word[count($word) - ($i + 1)] != $al[25 - array_search($word[$i], $al)]) $total = false;
+//   }
+//   return $total;
+// }
+
 ?>
