@@ -15,4 +15,15 @@
 // minMinMax([-1, 4, 5, -23, 24]); //[-23, -22, 24]
 // minMinMax([1, 3, -3, -2, 8, -1]); //[-3, 0, 8]
 // minMinMax([2, -4, 8, -5, 9, 7]); //[-5, -3,9]
+
+function minMinMax($array) {
+  $min = min($array);
+  $min_absent = min(array_diff(range(min($array),max($array)),$array));
+  $max = max($array);
+  return array($min, $min_absent, $max);
+}
+
+
+$answer = minMinMax([1, 3, -3, -2, 8, -1]);
+print_r("$answer \n");
 ?>
