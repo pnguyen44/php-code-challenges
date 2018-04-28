@@ -19,9 +19,10 @@
 // So the similarity equals to 3 / 6 = 0.5.
 
 function similarity(array $a, array $b): float {
-  $both = array_intersect($a, $b);
-  $arr = array_unique(array_merge($a, $b));
-  return count($both) / count($arr);
+  if (!empty($b)){
+    return count(array_intersect($a, $b)) / count(array_unique(array_merge($a, $b)));
+  }
+  return null;
 }
 
 $answer = similarity([0, 1, 3, 4, 5, 6, 9, 14, 15, 16, 17, 18, 19], [1, 4, 10, 12, 13, 14, 15, 16]);
