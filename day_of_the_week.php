@@ -4,12 +4,12 @@
 // Your task is easy, write a function that takes an date in format d/m/Y(String) and return what day of the week it was(String).
 // Example: "21/01/2017" -> "Saturday", "31/03/2017" -> "Friday"
 
-// function day_of_the_week($date){
-//   $date = str_replace('/','-', $date);
-//   return date('l', strtotime($date));
-// }
+function day_of_the_week($date){
+  $date = str_replace('/','-', $date);
+  return date('l', strtotime($date));
+}
 
-// Alternative solution:
+// Alternative solutions:
 // function day_of_the_week($date){
 //   list($d, $m, $y) = explode('/', $date);
 //   return date('l', strtotime("$y-$m-$d"));
@@ -24,7 +24,4 @@
 //   return $dow[ $dt->format('w') ];
 // }
 
-
-$answer = day_of_the_week("07/12/2000");
-print_r("$answer \n");
 ?>
