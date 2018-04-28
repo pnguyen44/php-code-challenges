@@ -31,6 +31,5 @@ function minMinMax($array) {
 // return [$min, $minAbsent, $max];
 // }
 
-$answer = minMinMax([1, 3, -3, -2, 8, -1]);
-print_r("$answer \n");
+
 ?>
