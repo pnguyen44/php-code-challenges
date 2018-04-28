@@ -11,8 +11,4 @@ function product($a) {
   return empty($a) ? NULL : array_product($a);
 }
 
-$answer = product([5, 4, 1, 3, 9]);
-print_r("$answer \n");
-
-
 ?>
