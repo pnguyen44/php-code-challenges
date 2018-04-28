@@ -9,6 +9,12 @@ function day_of_the_week($date){
   return date('l', strtotime($date));
 }
 
+// Alternative solution:
+// function day_of_the_week($date){
+//   list($d, $m, $y) = explode('/', $date);
+//   return date('l', strtotime("$y-$m-$d"));
+// }
+
 $answer = day_of_the_week("07/12/2000");
 print_r("$answer \n");
 ?>
