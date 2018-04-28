@@ -25,7 +25,4 @@ function similarity(array $a, array $b): float {
   return null;
 }
 
-$answer = similarity([0, 1, 3, 4, 5, 6, 9, 14, 15, 16, 17, 18, 19], [1, 4, 10, 12, 13, 14, 15, 16]);
-print_r("$answer \n");
-
 ?>
