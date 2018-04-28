@@ -23,6 +23,15 @@ function minMinMax($array) {
   return array($min, $min_absent, $max);
 }
 
+// Alternative solution:
+// function minMinMax($arr){
+//   $max = max($arr);
+//   $min = min($arr);
+//   $minAbsent = $min;
+//   while(in_array($minAbsent, $arr)) $minAbsent += 1;
+//
+// return [$min, $minAbsent, $max];
+// }
 
 $answer = minMinMax([1, 3, -3, -2, 8, -1]);
 print_r("$answer \n");
