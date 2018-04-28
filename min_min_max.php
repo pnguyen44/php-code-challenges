@@ -17,10 +17,8 @@
 // minMinMax([2, -4, 8, -5, 9, 7]); //[-5, -3,9]
 
 function minMinMax($array) {
-  $min = min($array);
   $min_absent = min(array_diff(range(min($array),max($array)),$array));
-  $max = max($array);
-  return array($min, $min_absent, $max);
+  return array(min($array), $min_absent, max($array));
 }
 
 // Alternative solution:
