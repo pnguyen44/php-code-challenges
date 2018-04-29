@@ -12,6 +12,19 @@ function freq_seq(string $s, string $sep): string {
   return join($sep, $result);
 }
 
+// Alternative solution:
+// function freq_seq(string $s, string $sep): string {
+//     $results = [];
+//
+//     $chars = str_split($s);
+//     $countValues = array_count_values($chars);
+//     foreach ($chars as $char) {
+//         $results[] = $countValues[$char];
+//     }
+//
+//     return implode($sep, $results);
+// }
+
 $answer = freq_seq("hello world", "-");
 print_r("$answer \n");
 
