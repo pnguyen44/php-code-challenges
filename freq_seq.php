@@ -33,7 +33,5 @@ function freq_seq(string $s, string $sep): string {
 //   }, $s));
 // }
 
-$answer = freq_seq("hello world", "-");
-print_r("$answer \n");
 
 ?>
