@@ -7,4 +7,16 @@
 // Examples
 // '123'   ==>  ['321', '21', '1']
 // 'abcde' ==>  ['edcba', 'dcba', 'cba', 'ba', 'a']
+
+function reverse_slice(string $s): array {
+  $s = strrev($s);
+  for($i = 0; $i < strlen($s); $i++) {
+    $result [] = substr($s, $i);
+  }
+  return $result;
+}
+
+$answer = reverse_slice("123");
+print_r("$answer \n");
+
 ?>
