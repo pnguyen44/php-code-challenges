@@ -9,9 +9,8 @@
 // 'abcde' ==>  ['edcba', 'dcba', 'cba', 'ba', 'a']
 
 function reverse_slice(string $s): array {
-  $s = strrev($s);
   for($i = 0; $i < strlen($s); $i++) {
-    $result [] = substr($s, $i);
+    $result [] = strrev(substr($s, $i));
   }
   return $result;
 }
