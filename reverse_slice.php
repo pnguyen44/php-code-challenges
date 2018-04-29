@@ -20,7 +20,4 @@ function reverse_slice(string $s): array {
 //   return array_map(function ($i) use ($s) {return substr(strrev($s), $i);}, range(0, strlen($s) - 1));
 // }
 
-$answer = reverse_slice("123");
-print_r("$answer \n");
-
 ?>
