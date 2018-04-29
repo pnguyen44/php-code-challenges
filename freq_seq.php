@@ -25,6 +25,14 @@ function freq_seq(string $s, string $sep): string {
 //     return implode($sep, $results);
 // }
 
+// function freq_seq(string $s, string $sep): string {
+//   $s = str_split($s);
+//   $dict = array_count_values($s);
+//   return join($sep, array_map(function ($char) use ($dict) {
+//     return $dict[$char];
+//   }, $s));
+// }
+
 $answer = freq_seq("hello world", "-");
 print_r("$answer \n");
 
