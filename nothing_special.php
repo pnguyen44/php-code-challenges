@@ -13,7 +13,4 @@ function nothing_special($s): string {
 //   return !is_string($s) ? "Not a string!" : preg_replace('/[^a-z\d\s]/i', "", $s);
 // }
 
-$answer = nothing_special("St@arboard P^ort$A$ ***little k@$ata fo&r ^my ^trou%bl$esSteamroller2.55");
-print_r("$answer \n");
-
 ?>
