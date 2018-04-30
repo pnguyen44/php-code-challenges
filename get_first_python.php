@@ -40,15 +40,6 @@
 //
 // The input array will always be valid and formatted as in the example above.
 
-function get_first_python($a) {
-  foreach($a as $l) {
-    if($l["language"] === "Python") {
-      return $l['first_name']. ', ' .  $l['country'];
-    }
-  }
-  return 'There will be no Python developers';
-}
-
 $list1 = [
   [
     "first_name" => "Mark",
@@ -75,6 +66,24 @@ $list1 = [
     "language" => "Clojure"
   ]
 ];
+
+
+function get_first_python($a) {
+  foreach($a as $l) {
+    if($l["language"] === "Python") {
+      return $l['first_name']. ', ' .  $l['country'];
+    }
+  }
+  return 'There will be no Python developers';
+}
+
+
+// Alternative Solution:
+// function get_first_python($a) {
+//   $key = array_search('Python',array_column($a, 'language'));
+//
+//   return ($key === false) ? 'There will be no Python developers' : $a[$key]['first_name'].', '.$a[$key]['country'];
+// }
 
 $answer = get_first_python($list1);
 print_r("$answer \n");
