@@ -81,11 +81,7 @@ function get_first_python($a) {
 // Alternative Solution:
 // function get_first_python($a) {
 //   $key = array_search('Python',array_column($a, 'language'));
-//
 //   return ($key === false) ? 'There will be no Python developers' : $a[$key]['first_name'].', '.$a[$key]['country'];
 // }
-
-$answer = get_first_python($list1);
-print_r("$answer \n");
 
 ?>
