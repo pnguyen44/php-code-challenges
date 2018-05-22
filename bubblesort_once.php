@@ -12,11 +12,10 @@
 
 function bubblesort_once($a) {
   for($i = 0; $i < count($a) - 1; $i++) {
-    $x = $a[$i];
-    $y = $a[$i + 1];
+    $temp = $a[$i];
     if ($a[$i] > $a[$i + 1]) {
-      $a[$i]= $y;
-      $a[$i + 1] = $x;
+      $a[$i]=  $a[$i + 1];
+      $a[$i + 1] = $temp;
     }
   }
   return $a;
