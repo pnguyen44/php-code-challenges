@@ -16,10 +16,9 @@
 
 function median($a) {
   sort($a);
-  if (!(count($a) % 2)) {
-    return array_sum(array_slice($a,count($a)/2 - 1, 2)) / 2;
-  } else {
-    return array_values(array_slice($a,count($a)/2))[0];
-  }
+  return count($a) % 2 ? $a[count($a)/2] : ($a[count($a)/2 - 1] + $a[count($a)/2])/2;
 }
+
+$answer = median([2, 1, 3, 4]);
+print_r("$answer \n");
 ?>
