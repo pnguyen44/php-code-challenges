@@ -10,5 +10,20 @@
 // Task
 // Program an algorithm in Javascript (or your selected language, if it is available) that performs exactly 1 complete pass (no more, no less :D) of the Bubblesort algorithm to a list of positive integers. You may assume all arguments provided are arrays containing at least 2 positive integers.
 
+function bubblesort_once($a) {
+  for($i = 0; $i < count($a) - 1; $i++) {
+    $x = $a[$i];
+    $y = $a[$i + 1];
+    if ($a[$i] > $a[$i + 1]) {
+      $a[$i]= $y;
+      $a[$i + 1] = $x;
+    }
+  }
+  return $a;
+}
+
+
+$answer = bubblesort_once([9,7,5,3,1,2,4,6,8]);
+print_r("$answer \n");
 
 ?>
