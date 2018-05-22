@@ -41,7 +41,7 @@ function fibs_fizz_buzz($n) {
 }
 
 function fizz_buzz($n) {
-  return $n % 15 === 0 ? 'FizzBuzz' : ($n % 3 === 0 ? 'Fizz' : ($n % 5 === 0 ? 'Buzz' : $n));
+  return !($n % 15) ? 'FizzBuzz' : (!($n % 5) ? 'Buzz' : (!($n % 3) ? 'Fizz' : $n));
 }
 
 
