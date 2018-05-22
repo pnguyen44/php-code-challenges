@@ -32,27 +32,16 @@
 // [1,1,2,"Fizz","Buzz",8,13,"Fizz",34,"Buzz",89,"Fizz",233,377,"Buzz","Fizz",1597,2584,4181,"FizzBuzz"]
 
 function fibs_fizz_buzz($n) {
-  print_r($n);
   if($n === 1) return [1];
-  if($n === 2) return [1,1];
   $arr = [1,1];
-  $result = $arr;
   for($i = 0; $i < $n - 2; $i++) {
-    $x =  $arr[$i] + $arr[$i + 1];
-    // print_r("$x \n");
-    $arr[] = $x;
-    if ($x % 15 === 0) {
-      $x ='FizzBuzz';
-    } else if ($x % 3 === 0) {
-      $x ='Fizz';
-    } else if ($x % 5 === 0) {
-      $x = 'Buzz';
-    }
-
-    $result[] = $x;
+    $arr[] =  $arr[$i] + $arr[$i + 1];
   }
-  // print_r($result);
-  return $result;
+  return array_map('fizz_buzz', $arr);
+}
+
+function fizz_buzz($n) {
+  return $n % 15 === 0 ? 'FizzBuzz' : ($n % 3 === 0 ? 'Fizz' : ($n % 5 === 0 ? 'Buzz' : $n));
 }
 
 
