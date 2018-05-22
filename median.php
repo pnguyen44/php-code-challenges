@@ -13,4 +13,13 @@
 // Input [1, 2, 3, 4] --> Median 2.5
 //
 // Input [3, 4, 1, 2, 5] --> Median 3
+
+function median($a) {
+  sort($a);
+  if (!(count($a) % 2)) {
+    return array_sum(array_slice($a,count($a)/2 - 1, 2)) / 2;
+  } else {
+    return array_values(array_slice($a,count($a)/2))[0];
+  }
+}
 ?>
