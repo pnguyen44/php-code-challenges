@@ -15,6 +15,7 @@
 // Input [3, 4, 1, 2, 5] --> Median 3
 
 function median($a) {
+  if (!count($a)) return NULL;
   sort($a);
   return count($a) % 2 ? $a[count($a)/2] : ($a[count($a)/2 - 1] + $a[count($a)/2])/2;
 }
