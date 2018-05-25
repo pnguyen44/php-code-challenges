@@ -18,6 +18,10 @@ function closest_multiple_10($n) {
   return round($n/10) * 10;
 }
 
+// Altervative Solution:
+// function closest_multiple_10($n) {
+//   return round($n, -1);
+// }
 
 $answer = closest_multiple_10(33.29080);
 print_r("$answer \n");
