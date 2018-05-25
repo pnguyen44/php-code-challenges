@@ -15,6 +15,16 @@ function iccanobif($n) {
   return array_reverse($arr);
 }
 
+// Alternative Solution:
+// function fibonacci($n) {
+//   if ($n < 3) return 1;
+//   return fibonacci($n - 2) + fibonacci($n - 1);
+// }
+//
+// function iccanobif($n) {
+//   return array_reverse(array_map('fibonacci', range(1, $n)));
+// }
+
 $answer = iccanobif(1);
 print_r("$answer \n");
 ?>
