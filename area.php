@@ -6,6 +6,4 @@ function area($d, $l) {
   return $d > $l ? round($l * sqrt($d ** 2 - $l ** 2),2) : 'Not a rectangle';
 }
 
-$answer = area(12, 5);
-print_r("$answer \n");
 ?>
