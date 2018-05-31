@@ -8,4 +8,12 @@
 // count_char("Fancy fifth fly aloof", "f"); // => 5
 // The character can be any alphanumeric character.
 
+function count_char(string $s, string $c): int {
+  return substr_count(strtolower($s),strtolower($c));
+}
+
+$answer = count_char("Hello davidhu2000, my ", "d");
+print_r("$answer \n");
+
+
 ?>
