@@ -9,4 +9,12 @@
 // If no number was deleted from the array and no difference with it, your function should return the int 0.
 //
 // Note that N may be 1 or less (in the latter case, the first array will be []).
+
+function findDeletedNumber(array $arr, array $mixedArr): int {
+  return  count($arr) === count($mixedArr) ? 0 : array_values(array_diff($arr,$mixedArr))[0];
+}
+
+$answer = findDeletedNumber([1,2,3,4,5,6,7,8,9], [3,2,4,6,7,8,1,9]);
+print_r("$answer \n");
+
 ?>
