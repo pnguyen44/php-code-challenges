@@ -12,8 +12,5 @@ function count_char(string $s, string $c): int {
   return substr_count(strtolower($s),strtolower($c));
 }
 
-$answer = count_char("Hello davidhu2000, my ", "d");
-print_r("$answer \n");
-
 
 ?>
