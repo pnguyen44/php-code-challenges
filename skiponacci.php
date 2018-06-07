@@ -18,7 +18,4 @@ function skiponacci($n) {
   return join(' ', $res);
 }
 
-$answer = skiponacci(5);
-print_r("$answer \n");
-
 ?>
