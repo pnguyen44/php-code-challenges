@@ -5,15 +5,17 @@
 // "1 skip 2 skip 5 skip 13 skip 34"
 
 function skiponacci($n) {
-  if ($n === 1) return '1';
-  $fib = [1,1];
-  for($i = 0; $i < $n - 2; $i++) {
-    $fib[] = $fib[$i] + $fib[$i + 1];
+  for($i = 0; $i < $n; $i++) {
+    if ($i <= 1) {
+      $res[] = 1;
+    } else {
+      $res[] = $res[$i - 1] + $res[$i - 2];
+    }
   }
-  foreach($fib as $key => $val) {
-    $fib[$key] = ($key + 1) % 2 === 0 ? 'skip': $val;
+  foreach($res as $key => $val) {
+    $res[$key] = ($key + 1) % 2 === 0 ? 'skip': $val;
   }
-  return join(' ', $fib);
+  return join(' ', $res);
 }
 
 $answer = skiponacci(5);
