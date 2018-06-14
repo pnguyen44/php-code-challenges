@@ -5,4 +5,11 @@
 //
 // Write a function to calculate factorial for a given input. If input is below 0 or above 12 throw an exception of RangeException (PHP).
 
+function factorial(int $n): int {
+  if ($n < 0 || $n > 12) throw new RangeException();
+  if($n < 2) return 1;
+  return $n * factorial($n - 1);
+}
+
+
 ?>
