@@ -13,6 +13,11 @@ function is_palindrome($line) {
   return strrev(strval($line)) === strval($line);
 }
 
+// Alternative Solution:
+// function is_palindrome($line) {
+//   return $line == strrev($line);
+// }
+
 $answer = is_palindrome('anna');
 print_r("$answer \n");
 
