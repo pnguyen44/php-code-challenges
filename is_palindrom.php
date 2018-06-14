@@ -8,4 +8,12 @@
 // "walter" ==> false
 // 12321    ==> true
 // 123456   ==> false
+
+function is_palindrome($line) {
+  return strrev(strval($line)) === strval($line);
+}
+
+$answer = is_palindrome('anna');
+print_r("$answer \n");
+
 ?>
