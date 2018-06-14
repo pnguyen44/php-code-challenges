@@ -7,8 +7,7 @@
 
 function factorial(int $n): int {
   if ($n < 0 || $n > 12) throw new RangeException();
-  if($n < 2) return 1;
-  return $n * factorial($n - 1);
+  return $n ? $n * factorial($n - 1) : 1;
 }
 
 
