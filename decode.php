@@ -8,6 +8,16 @@
 // "I would like to interview on Monday morning!"
 // Your job is to write a method called decode that takes an encoded string as input and returns the decoded string as output.
 
+function decode($string){
+  $result = array_map( function ($x) {
+    if (strtolower($x) === $x && $x !== ' ' && ctype_alpha($x)) {
+      return chr(122 - ord(strtolower($x)) + 97);
+    } else {
+      return $x;
+    }
+  }, str_split($string));
+  return implode($result);
+}
 
 
 ?>
