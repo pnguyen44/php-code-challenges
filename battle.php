@@ -24,6 +24,4 @@ function battle($x, $y) {
   return $a === $b ? 'Tie!' : ($a > $b ? $x : $y);
 }
 
-$answer = battle("AAA", "Z");
-print_r("$answer \n");
 ?>
