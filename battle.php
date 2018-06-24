@@ -13,18 +13,15 @@
 //   battle("ONE", "TWO"); // => "TWO"`
 //   battle("ONE", "NEO"); // => "Tie!"
 
-function translate($str) {
-  $alph = array_combine(range(1,26), range('A', 'Z'));
-  return array_map(function($l) use($alph) {
-      if(strtoupper($l) === $l) {
-        return array_search($l, $alph);
-      } else {
-        return 0;
-      }
-  }, str_split($str));
+function power($str) {
+  return array_sum(array_map(function($l) {
+      return ord($l) - 64;
+  }, str_split($str)));
 }
 function battle($x, $y) {
-  return array_sum(translate($x)) === array_sum(translate($y)) ? "Tie!" : (array_sum(translate($x)) > array_sum(translate($y)) ? $x : $y);
+  $a = power($x);
+  $b = power($y);
+  return $a === $b ? 'Tie!' : ($a > $b ? $x : $y);
 }
 
 $answer = battle("AAA", "Z");
