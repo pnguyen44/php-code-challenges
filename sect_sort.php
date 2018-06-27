@@ -12,4 +12,21 @@
 // length - number of items to sort (optional)
 // if the length argument is not passed or is zero, you sort all items to the right of the start postiton in the array
 
+function sect_sort($arr, $start, $len = 0) {
+  $len = $len > 0  ?  $len : count(func_get_arg(0)) + $start;
+  $sort = array_slice($arr, $start, $len);
+  usort($sort, function($a,$b) {
+    return $a < $b ? -1 : 1;
+  });
+
+  return array_merge(
+    array_slice($arr, 0, $start),
+    $sort,
+    array_slice($arr, $len + $start, count($arr) - $len)
+  );
+}
+
+$answer = sect_sort([1, 2, 5, 7, 4, 6, 3, 9, 8], 2);
+print_r("$answer \n");
+
 ?>
