@@ -36,7 +36,4 @@ function sect_sort($array, $start, $len = null) {
 //     return $array;
 // }
 
-$answer = sect_sort([1, 2, 5, 7, 4, 6, 3, 9, 8], 2);
-print_r("$answer \n");
-
 ?>
