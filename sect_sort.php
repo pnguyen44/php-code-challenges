@@ -26,6 +26,16 @@ function sect_sort($array, $start, $len = null) {
   );
 }
 
+// Alternative Solution:
+// function sect_sort($array, $start, $length = NULL)
+// {
+//     $length = is_null($length) ? count($array) - $start : $length;
+//     $arr = array_slice($array, $start, $length);
+//     sort($arr);
+//     array_splice($array, $start, $length, $arr);
+//     return $array;
+// }
+
 $answer = sect_sort([1, 2, 5, 7, 4, 6, 3, 9, 8], 2);
 print_r("$answer \n");
 
