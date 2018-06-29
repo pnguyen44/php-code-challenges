@@ -21,6 +21,15 @@ function remove_or_add(string $s): string {
   },explode(' ', $s)));
 }
 
+// Alternative Solution:
+// function remove_or_add(string $s): string {
+//   return implode(' ', array_map(function ($w) {
+//     if (preg_match('/[^\!]$/', $w)) return $w . '!';
+//     if (preg_match('/\!{2,}$/', $w)) return $w;
+//     return preg_replace('/\!$/', '', $w);
+//   },explode(' ', $s)));
+// }
+
 $answer = remove_or_add("!Hi! !Hi !Hi!!");
 print_r("$answer \n");
 ?>
