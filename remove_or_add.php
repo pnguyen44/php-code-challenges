@@ -9,4 +9,18 @@
 // removeOrAdd("Hi! Hi Hi!!") === "Hi Hi! Hi!!"
 // removeOrAdd("!Hi! !Hi !Hi!!") === "!Hi !Hi! !Hi!!"
 
+function remove_or_add(string $s): string {
+  return implode(' ', array_map(function ($w) {
+    if ($w[strlen($w) - 1]  !== '!') {
+      return $w . '!';
+    } else if ( $w[strlen($w) - 1] === '!' && $w[strlen($w) - 2] !== '!') {
+      return substr($w, 0, -1);
+    } else {
+      return $w;
+    }
+  },explode(' ', $s)));
+}
+
+$answer = remove_or_add("!Hi! !Hi !Hi!!");
+print_r("$answer \n");
 ?>
