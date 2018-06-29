@@ -30,6 +30,4 @@ function remove_or_add(string $s): string {
 //   },explode(' ', $s)));
 // }
 
-$answer = remove_or_add("!Hi! !Hi !Hi!!");
-print_r("$answer \n");
 ?>
