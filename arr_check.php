@@ -18,10 +18,7 @@
 // ] => false
 
 function arr_check(array $a): bool {
-  $arrays = array_filter($a, function ($v) {
-    return is_array($v);
-  });
-  return count($a) === count($arrays);
+  return count($a) === count(array_filter($a, 'is_array'));
 }
 
 
