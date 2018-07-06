@@ -16,4 +16,24 @@
 //     public $two = 2;
 //   }
 // ] => false
+
+function arr_check(array $a): bool {
+  $arrays = array_filter($a, function ($v) {
+    return is_array($v);
+  });
+  return count($a) === count($arrays);
+}
+
+
+
+$answer = (arr_check([
+      new class {
+        public $one = 1;
+      },
+      new class {
+        public $two = 2;
+      }
+    ]));
+print_r("$answer \n");
+
 ?>
