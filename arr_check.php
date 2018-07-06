@@ -17,28 +17,16 @@
 //   }
 // ] => false
 
-// function arr_check(array $a): bool {
-//   return count($a) === count(array_filter($a, 'is_array'));
-// }
-
-// Alternative Solution:
 function arr_check(array $a): bool {
-  foreach($a as $value) {
-    if (!is_array($value)) return false;
-  }
-  return true;
+  return count($a) === count(array_filter($a, 'is_array'));
 }
 
-
-
-$answer = (arr_check([
-      new class {
-        public $one = 1;
-      },
-      new class {
-        public $two = 2;
-      }
-    ]));
-print_r("$answer \n");
+// Alternative Solution:
+// function arr_check(array $a): bool {
+//   foreach($a as $value) {
+//     if (!is_array($value)) return false;
+//   }
+//   return true;
+// }
 
 ?>
