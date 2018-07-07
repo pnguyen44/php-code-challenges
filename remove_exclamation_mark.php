@@ -24,7 +24,4 @@ function remove(string $s): string {
 //   }));
 // }
 
-$answer = remove("Hi! !Hi Hi Hi!");
-print_r("$answer \n");
-
 ?>
