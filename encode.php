@@ -11,7 +11,7 @@
 
 function encode(string $s): string {
     return  implode('', array_map(function($c) {
-    return ord(strtoupper($c)) > 64 &&  ord(strtoupper($c)) < 91 ?  (ord(strtoupper($c)) + 1) % 2 : $c;
+      return ord(strtoupper($c)) > 64 &&  ord(strtoupper($c)) < 91 ?  (ord(strtoupper($c)) + 1) % 2 : $c;
     },str_split($s)));
 }
 
@@ -22,8 +22,5 @@ function encode(string $s): string {
 //   }, $s);
 // }
 
-
-$answer = encode("Hello World!");
-print_r("$answer \n");
 
 ?>
