@@ -9,5 +9,14 @@
 // encode("Hello World!"); // => "10110 00111!"
 // This is because H's index is 7, which is odd, so it is replaced by 1, and so on.
 
+function encode(string $s): string {
+    return  implode('', array_map(function($c) {
+    return ord(strtoupper($c)) > 64 &&  ord(strtoupper($c)) < 91 ?  (ord(strtoupper($c)) + 1) % 2 : $c;
+    },str_split($s)));
+}
+
+
+$answer = encode("Hello World!");
+print_r("$answer \n");
 
 ?>
