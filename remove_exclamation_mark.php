@@ -17,6 +17,12 @@ function remove(string $s): string {
   }));
 }
 
+// Alternative Solution:
+// function remove(string $s): string {
+//   return join(' ', array_filter(explode(' ', $s), function($w) {
+//     return preg_match_all('/\!/', $w) !== 1;
+//   }));
+// }
 
 $answer = remove("Hi! !Hi Hi Hi!");
 print_r("$answer \n");
