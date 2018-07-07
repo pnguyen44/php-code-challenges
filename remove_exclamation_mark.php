@@ -10,4 +10,15 @@
 // remove("Hi! !Hi Hi!") === ""
 // remove("Hi! Hi!! Hi!") === "Hi!!"
 // remove("Hi! !Hi! Hi!") === "!Hi!"
+
+function remove(string $s): string {
+  return implode(' ' ,array_filter(explode(' ', $s), function ($x) {
+    return count(explode('!', $x)) !== 2;
+  }));
+}
+
+
+$answer = remove("Hi! !Hi Hi Hi!");
+print_r("$answer \n");
+
 ?>
