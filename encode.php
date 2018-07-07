@@ -15,6 +15,13 @@ function encode(string $s): string {
     },str_split($s)));
 }
 
+// Alternative Solution:
+// function encode(string $s): string {
+//   return preg_replace_callback('/[a-z]/i', function ($m) {
+//      return (ord(strtoupper($m[0])) + 1) % 2;
+//   }, $s);
+// }
+
 
 $answer = encode("Hello World!");
 print_r("$answer \n");
