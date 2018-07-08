@@ -19,4 +19,13 @@
 // ('Codewars')  =>  '.c.d.w.r.s'
 // ('aBAcAba')   =>  '.b.c.b'
 
+function string_task(string $s): string {
+  return preg_replace_callback( '/./', function ($l) {
+      return '.' . $l[0];
+  }, preg_replace('/[aeiouy]/i', '', strtolower($s)));
+}
+
+$answer = string_task("Tour");
+print_r("$answer \n");
+
 ?>
