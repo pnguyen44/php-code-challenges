@@ -34,7 +34,5 @@ function string_task(string $s): string {
 //      return preg_replace(['/[aiyeuo]/', '/([^aiyeuo])/'], ['', '.$1'], strtolower($s));
 // }
 
-$answer = string_task("Tour");
-print_r("$answer \n");
 
 ?>
