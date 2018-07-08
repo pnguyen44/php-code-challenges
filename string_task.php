@@ -25,6 +25,11 @@ function string_task(string $s): string {
   }, preg_replace('/[aeiouy]/i', '', strtolower($s)));
 }
 
+// Alternative Solution:
+// function string_task(string $s): string {
+//   return preg_replace('/./', ".$0", preg_replace('/[aeiouy]/', '', strtolower($s)));
+// }
+
 $answer = string_task("Tour");
 print_r("$answer \n");
 
