@@ -4,7 +4,4 @@ function check_string($str, $word) {
   return stristr($str, $word) ? 'true' : 'false';
 }
 
-$test = check_string('appleistes is blue', 'test');
-print_r($test);
-
 ?>
