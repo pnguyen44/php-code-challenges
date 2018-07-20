@@ -11,12 +11,27 @@ function cart_prod_2_sets($sets) {
   return $result;
 }
 
+// Alternative Solution:
+// function cart_prod_2_sets($sets) {
+//   $result = [];
+//   $arr = [];
+//   for ($s = 0; $s < count($sets[0]); $s++) {
+//     $arr[] = $sets[0][$s];
+//     for ($i = 0; $i < count($sets[1]); $i++) {
+//       $result[] = array_merge($arr, [$sets[1][$i]]);
+//     };
+//     array_pop($arr);
+//   };
+//   return $result;
+// }
+
+
 // test
 print_r(cart_prod_2_sets([[1], [1]]));
 print_r(cart_prod_2_sets([[1], ['a']]));
 print_r(cart_prod_2_sets([['a'], [1]]));
 print_r(cart_prod_2_sets([[1, 2, 3], ['a']]));
 print_r(cart_prod_2_sets([[1, 2], ['a', 'b']]));
-
+print_r(cart_prod_3_sets([[1, 2], [1, 2], [1, 2]]));
 
 ?>
