@@ -44,6 +44,9 @@ function cart_prod_3_sets($sets) {
   return $result;
 }
 
+// Write a function that returns an array of the cartesian product of any number of sets passed to it.
+
+
 
 // test
 // print_r(cart_prod_2_sets([[1], [1]]));
