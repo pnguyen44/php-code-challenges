@@ -26,6 +26,9 @@ function cart_prod_2_sets($sets) {
 // }
 
 
+// Write a function that returns an array of the cartesian product of three sets.
+
+
 // test
 print_r(cart_prod_2_sets([[1], [1]]));
 print_r(cart_prod_2_sets([[1], ['a']]));
