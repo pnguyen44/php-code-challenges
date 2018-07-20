@@ -45,7 +45,20 @@ function cart_prod_3_sets($sets) {
 }
 
 // Write a function that returns an array of the cartesian product of any number of sets passed to it.
-
+function cart_prod($sets) {
+  $results = [[]];
+  foreach($sets as $key => $val) {
+    $temp = [];
+    foreach($results as $result) {
+      foreach($val as $item) {
+        $result[$key] = $item;
+        $temp[] = $result;
+      }
+    }
+    $results = $temp;
+  }
+  return $results;
+ }
 
 
 // test
@@ -54,6 +67,7 @@ function cart_prod_3_sets($sets) {
 // print_r(cart_prod_2_sets([['a'], [1]]));
 // print_r(cart_prod_2_sets([[1, 2, 3], ['a']]));
 // print_r(cart_prod_2_sets([[1, 2], ['a', 'b']]));
-print_r(cart_prod_3_sets([[1, 2], [1, 2], [1, 2]]));
+// print_r(cart_prod_3_sets([[1, 2], [1, 2], [1, 2]]));
+print_r(cart_prod([[1, 2], [1, 2], [1,2]]))
 
 ?>
