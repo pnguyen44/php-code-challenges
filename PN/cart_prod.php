@@ -27,6 +27,22 @@ function cart_prod_2_sets($sets) {
 
 
 // Write a function that returns an array of the cartesian product of three sets.
+function cart_prod_3_sets($sets) {
+  $result = [];
+  $arr = [];
+  for ($s = 0; $s < count($sets[0]); $s++) {
+    $arr[] = $sets[0][$s];
+    for ($a = 0; $a < count($sets[1]); $a++) {
+      $arr[] = $sets[1][$a];
+      for ($i = 0; $i < count($sets[2]); $i++) {
+        $result[] = array_merge($arr, [$sets[2][$i]]);
+      };
+      array_pop($arr);
+    };
+    $arr = [];
+  };
+  return $result;
+}
 
 
 // test
