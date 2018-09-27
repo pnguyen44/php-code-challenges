@@ -61,13 +61,18 @@ function cart_prod($sets) {
  }
 
 
-// test
-// print_r(cart_prod_2_sets([[1], [1]]));
-// print_r(cart_prod_2_sets([[1], ['a']]));
-// print_r(cart_prod_2_sets([['a'], [1]]));
-// print_r(cart_prod_2_sets([[1, 2, 3], ['a']]));
-// print_r(cart_prod_2_sets([[1, 2], ['a', 'b']]));
-// print_r(cart_prod_3_sets([[1, 2], [1, 2], [1, 2]]));
-print_r(cart_prod([[1, 2], [1, 2], [1,2]]))
+ // test
+
+ // print_r(cart_prod_2_sets([[1], [1]])) //  [[1, 1]]
+ // print_r(cart_prod_2_sets([[1], ['a']])) // [[1, 'a']]
+ // print_r(cart_prod_2_sets([['a'], [1]])) // [['a', 1]]
+ // print_r(cart_prod_2_sets([[1, 2, 3], ['a']])) // [[1, 'a'], [2, 'a'], [3, 'a']]
+ // print_r(cart_prod_2_sets([[1, 2], ['a', 'b']])) // [[1, 'a'], [1, 'b'], [2, 'a'], [2, 'b']]
+ //print_r(cartProd([[1], [1, 2], [1,2,3]])) // [[1, 1, 1], [1, 2, 1],
+                                               // [1, 1, 2], [1, 2, 2],
+                                               // [1, 1, 3], [1, 2, 3]]
+ print_r(cartProd([[1, 2], [1, 2], [1,2]])) // [[1, 1, 1], [1, 1, 2], [1, 2, 1],
+                                               // [1, 2, 2], [2, 1, 1], [2, 1, 2],
+                                               // [2, 2, 1], [2, 2, 2]]
 
 ?>
