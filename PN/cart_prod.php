@@ -46,19 +46,19 @@ function cart_prod_3_sets($sets) {
 
 // Write a function that returns an array of the cartesian product of any number of sets passed to it.
 function cart_prod($sets) {
-  $results = [[]];
-  foreach($sets as $key => $val) {
-    $temp = [];
-    foreach($results as $result) {
-      foreach($val as $item) {
-        $result[$key] = $item;
-        $temp[] = $result;
-      }
-    }
-    $results = $temp;
-  }
-  return $results;
- }
+	$combos = [[]];
+	foreach($sets as $key => $val) {
+		$new_combos = [];
+		foreach($combos as $combo) {
+			foreach($val as $item) {
+				$combo[$key] = $item;
+				$new_combos[] = $combo;
+			}
+		}
+		$combos = $new_combos;
+	}
+	return $combos;
+}
 
 
  // test
