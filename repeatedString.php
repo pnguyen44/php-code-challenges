@@ -9,5 +9,10 @@
 // repeatedString has the following parameter(s):
 //
 // s: a string to repeat
-// n: the number of characters to consider
+// n: the number of characters to consider`
+
+
+
+console.log(repeatedString('abc', 10)) // 7
+console.log(repeatedString('a', 1000000000000)) // 1000000000000
 ?>
