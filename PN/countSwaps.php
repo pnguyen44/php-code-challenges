@@ -20,6 +20,24 @@
 // First Element: 1
 // Last Element: 6
 
+function countSwaps($a) {
+    $numSwaps = 0;
+    for ($i = 0; $i < count($a); $i++) {
+        for( $j = 0; $j < count($a) -1; $j++) {
+            if ($a[$j] > $a[$j + 1]) {
+                $numSwaps +=1;
+                $temp = $a[$j];
+                $a[$j] = $a[$j + 1];
+                $a[$j +1] = $temp;
+            }
+        }
+    }
+    $lastElement = $a[count($a) -1];
+    print_r("Array is sorted in $numSwaps swaps. \n");
+    print_r("First Element: $a[0] \n");
+    print_r("Last Element: " . $a[count($a) -1]);
+}
+
 print_r(countSwaps([4, 2, 3, 1])) // Array is sorted in 5 swaps.
                                       // First Element: 1
                                       // Last Element: 4
