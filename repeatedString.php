@@ -11,9 +11,16 @@
 // s: a string to repeat
 // n: the number of characters to consider`
 
+function repeatedString($s, $n) {
+    $num_0f_a = substr_count($s, 'a');
+    $repeat = floor($n/strlen($s));
+
+    $left = substr($s, 0, $n - (strlen($s) * $repeat));
+    // print_r($left);
+    return ($repeat * $num_0f_a) + substr_count($left,'a');
+}
 
 
-
-print_r(repeatedString('abc', 10)) // 7
-print_r(repeatedString('a', 1000000000000)) // 1000000000000
+print_r(repeatedString('abc', 10) . "\n"); // 7
+print_r(repeatedString('a', 1000000000000) . "\n"); // 1000000000000
 ?>
