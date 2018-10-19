@@ -32,6 +32,7 @@ function countSwaps($a) {
             }
         }
     }
+    $lastElement = $a[count($a) -1];
     print_r("Array is sorted in $numSwaps swaps. \n");
     print_r("First Element: $a[0] \n");
     print_r("Last Element: " . $a[count($a) -1]);
