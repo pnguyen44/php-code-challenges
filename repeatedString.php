@@ -14,9 +14,7 @@
 function repeatedString($s, $n) {
     $num_0f_a = substr_count($s, 'a');
     $repeat = floor($n/strlen($s));
-
     $left = substr($s, 0, $n - (strlen($s) * $repeat));
-    // print_r($left);
     return ($repeat * $num_0f_a) + substr_count($left,'a');
 }
 
