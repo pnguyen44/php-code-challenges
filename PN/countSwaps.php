@@ -20,5 +20,7 @@
 // First Element: 1
 // Last Element: 6
 
-
+print_r(countSwaps([4, 2, 3, 1])) // Array is sorted in 5 swaps.
+                                      // First Element: 1
+                                      // Last Element: 4
 ?>
