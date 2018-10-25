@@ -10,7 +10,6 @@
 
 function rotLeft($a, $d) {
    $d = $d % count($a);
-    print_r($d);
    $start = array_slice($a,$d);
    $end = array_slice($a,0, $d);
    return array_merge($start,$end);
