@@ -8,4 +8,10 @@
 // An array of integers a.
 // An integer d, the number of rotations.
 
+
+
+print_r(rotLeft([1, 2, 3, 4, 5],4)) // 5 1 2 3 4
+
+
+
 ?>
