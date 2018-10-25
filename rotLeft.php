@@ -8,7 +8,15 @@
 // An array of integers a.
 // An integer d, the number of rotations.
 
+function rotLeft($a, $d) {
+   $d = $d % count($a);
+    print_r($d);
+   $start = array_slice($a,$d);
+   $end = array_slice($a,0, $d);
+       // print_r($a);
+   return array_merge($start,$end);
 
+}
 
 print_r(rotLeft([1, 2, 3, 4, 5],4)) // 5 1 2 3 4
 
