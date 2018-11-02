@@ -38,8 +38,6 @@ function makeAnagram($a, $b) {
           if($aArr[$i]==$bArr[$j]){
               unset($aArr[$i]);
               unset($bArr[$j]);
-             // var_dump($aArr);
-              //var_dump($bArr);
               break;
           }
       }
