@@ -30,11 +30,11 @@ function makeAnagram($a, $b) {
 
   for($i=0;$i<strlen($a);$i++){
       for($j=0;$j<strlen($b);$j++){
-          if(!isset($arr_2[$j]))continue;
+          // if(!isset($arr_2[$j]))continue;
           if($arr_1[$i]==$arr_2[$j]){
               unset($arr_1[$i]);
               unset($arr_2[$j]);
-              break;
+              // break;
           }
       }
   }
