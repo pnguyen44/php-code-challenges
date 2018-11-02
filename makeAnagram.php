@@ -11,13 +11,11 @@ function makeAnagram($a, $b) {
   } else {
     $short_w = $arr1;
   }
-  // $temp = $short_w;
   $count = 0;
   for ($i = 0; $i < count($short_w); $i++) {
     $index = array_search($short_w[$i],$long_w);
     if ($index === false) {
       $count += 1;
-      // unset($short_w[$index]);
     } else {
       unset($long_w[$index]);
     }
