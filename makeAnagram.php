@@ -25,12 +25,8 @@
 
 // Alternative Solution:
 function makeAnagram($a, $b) {
-  // $aLen = strlen($a);
-  // $bLen = strlen($b);
-
   $aArr = str_split($a);
   $bArr = str_split($b);
-
 
   for($i=0;$i<strlen($a);$i++){
       for($j=0;$j<strlen($b);$j++){
