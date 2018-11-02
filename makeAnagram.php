@@ -25,15 +25,15 @@
 
 // Alternative Solution:
 function makeAnagram($a, $b) {
-  $aLen = strlen($a);
-  $bLen = strlen($b);
+  // $aLen = strlen($a);
+  // $bLen = strlen($b);
 
   $aArr = str_split($a);
   $bArr = str_split($b);
 
 
-  for($i=0;$i<$aLen;$i++){
-      for($j=0;$j<$bLen;$j++){
+  for($i=0;$i<strlen($a);$i++){
+      for($j=0;$j<strlen($b);$j++){
           if(!isset($bArr[$j]))continue;
           if($aArr[$i]==$bArr[$j]){
               unset($aArr[$i]);
@@ -45,7 +45,7 @@ function makeAnagram($a, $b) {
   echo count($aArr) + count($bArr);
 }
 
-print_r(makeAnagram("cde", "abc")); // 4
-// print_r(makeAnagram("showman", "woman")); // 2
+// print_r(makeAnagram("cde", "abc")); // 4
+print_r(makeAnagram("showman", "woman")); // 2
 
 ?>
