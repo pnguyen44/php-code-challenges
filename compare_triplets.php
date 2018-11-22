@@ -36,7 +36,6 @@ function compareTriplets($a, $b) {
       $b_score +=1;
     }
   }
-  print_r([$a_score,$b_score]);
   return [$a_score,$b_score];
 }
 
