@@ -24,4 +24,8 @@
 //
 // a: an array of integers representing Alice's challenge rating
 // b: an array of integers representing Bob's challenge rating
+
+
+
+print_r(compareTriplets([17, 28, 30], [99, 16, 8])) // [2, 1]
 ?>
