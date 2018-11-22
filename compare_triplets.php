@@ -26,6 +26,19 @@
 // b: an array of integers representing Bob's challenge rating
 
 
+function compareTriplets($a, $b) {
+  $a_score = 0;
+  $b_score = 0;
+  for ($i =0; $i < count($a); $i++) {
+    if ($a[$i] > $b[$i]) {
+      $a_score += 1;
+    } else if ($a[$i] < $b[$i]) {
+      $b_score +=1;
+    }
+  }
+  print_r([$a_score,$b_score]);
+  return [$a_score,$b_score];
+}
 
 print_r(compareTriplets([17, 28, 30], [99, 16, 8])) // [2, 1]
 ?>
