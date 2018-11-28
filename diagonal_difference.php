@@ -19,8 +19,13 @@
 // arr: an array of integers .
 
 function diagonalDifference($arr) {
-
-
+  $diagonal_1 = [];
+  $diagonal_2 = [];
+  for($i = 0; $i < count($arr); $i++) {
+    $diagonal_1[] = $arr[$i][$i];
+    $diagonal_2[] = $arr[$i][count($arr) - 1 - $i];
+  }
+  return abs(array_sum($diagonal_1) - array_sum($diagonal_2));
 }
 
 
