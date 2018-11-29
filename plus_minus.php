@@ -11,6 +11,23 @@
 // 0.200000
 
 function plusMinus($arr) {
+  $neg_count = count(array_filter($arr, function($x) {
+    return $x < 0;
+  }));
+
+  $pos_count = count(array_filter($arr, function($x) {
+    return $x > 0;
+  }));
+
+  $zero_count = count($arr) - ($neg_count + $pos_count);
+
+  $num_of_element = count($arr);
+
+  // print_r($pos_count / $num_of_element);
+
+  print_r(number_format($pos_count / $num_of_element, 6) . "\n");
+  print_r(number_format($neg_count / $num_of_element, 6) . "\n");
+  print_r(number_format($zero_count / $num_of_element, 6) . "\n");
 
 }
 
