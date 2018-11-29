@@ -23,8 +23,6 @@ function plusMinus($arr) {
 
   $num_of_element = count($arr);
 
-  // print_r($pos_count / $num_of_element);
-
   print_r(number_format($pos_count / $num_of_element, 6) . "\n");
   print_r(number_format($neg_count / $num_of_element, 6) . "\n");
   print_r(number_format($zero_count / $num_of_element, 6) . "\n");
