@@ -79,6 +79,24 @@ function cart_prod($sets) {
 // }
 
 
+// function cart_prod($sets) {
+// 	$combos = [[]];
+// 	for ($i = 0; $i < count($sets); $i++) {
+// 		$cur_set = $sets[$i];
+// 		$new_combos = [];
+// 		for ($j = 0; $j < count($combos); $j++ ) {
+// 			$curr_combo = $combos[$j];
+// 			for ($k = 0; $k < count($cur_set); $k++) {
+// 				$cur_elm = [$cur_set[$k]];
+// 				$new_combo = array_merge($cur_elm, $curr_combo);
+// 				$new_combos[] = $new_combo;
+// 			}
+// 		}
+// 		$combos = $new_combos;
+// 	}
+// 	return $combos;
+// }
+
  // test
 
  // print_r(cart_prod_2_sets([[1], [1]])) //  [[1, 1]]
