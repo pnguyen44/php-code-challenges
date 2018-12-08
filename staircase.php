@@ -13,7 +13,16 @@
 // Write a program that prints a staircase of size n.
 
 function staircase($n) {
-  
+  for($i = 0; $i < $n; $i++) {
+    for ($j = 1; $j <= $n - $i - 1; $j++) {
+      echo " ";
+    };
+
+    for ($k = 1; $k <= $i +1; $k++) {
+      echo "#";
+    };
+    echo "\n";
+  }
 }
 
 print_r(staircase(6));
