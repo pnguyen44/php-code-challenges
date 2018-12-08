@@ -6,14 +6,7 @@
 
 
 function miniMaxSum($arr) {
-
-  function comp($a, $b) {
-    if ($a == $b) return 0;
-    return $a < $b ? -1 : 1;
-  ;}
-
-  usort($arr, 'comp');
-  // asort($arr);
+  asort($arr);
   $maxSum = array_sum(array_slice($arr, 1));
 
   $minSum = array_sum(array_slice($arr, 0, count($arr) - 1));
