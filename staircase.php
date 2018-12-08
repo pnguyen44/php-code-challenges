@@ -12,5 +12,9 @@
 //
 // Write a program that prints a staircase of size n.
 
+function staircase($n) {
+  
+}
 
+print_r(staircase(6));
 ?>
