@@ -17,7 +17,6 @@
 
 function birthdayCakeCandles($ar) {
     $max = max($ar);
-    print_r($max);
     return count(array_filter($ar, function($x) use ($max) {
         return $x === $max;
     }));
