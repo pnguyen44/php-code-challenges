@@ -15,4 +15,12 @@
 //
 // ar: an array of integers representing candle heights
 
+function birthdayCakeCandles($ar) {
+
+}
+
+
+print_r(birthdayCakeCandles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25])) // 4
+
+
 ?>
