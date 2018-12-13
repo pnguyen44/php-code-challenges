@@ -16,8 +16,13 @@
 // ar: an array of integers representing candle heights
 
 function birthdayCakeCandles($ar) {
-
+    $max = max($ar);
+    print_r($max);
+    return count(array_filter($ar, function($x) use ($max) {
+        return $x === $max;
+    }));
 }
+
 
 
 print_r(birthdayCakeCandles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25])) // 4
