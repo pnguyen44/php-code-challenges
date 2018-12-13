@@ -22,6 +22,10 @@ function birthdayCakeCandles($ar) {
     }));
 }
 
+// Alternative Solution;
+// function birthdayCakeCandles($ar) {
+//   return array_count_values($ar)[max($ar)];
+// }
 
 
 print_r(birthdayCakeCandles([82, 49, 82, 82, 41, 82, 15, 63, 38, 25])) // 4
