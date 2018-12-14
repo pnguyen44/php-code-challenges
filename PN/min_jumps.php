@@ -11,7 +11,6 @@ function min_jumps($arr) {
 		for ($j = 0; $j < $i; $j++) {
 			if ($arr[$j] + $j >= $i && $num_of_jumps[$j] !== INF ) {
 				$num_of_jumps[$i] = min($num_of_jumps[$i], $num_of_jumps[$j] + 1);
-        break;
 			}
 		}
 	}
