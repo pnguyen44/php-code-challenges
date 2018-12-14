@@ -48,12 +48,11 @@ function cart_prod_3_sets($sets) {
 
 function cart_prod($sets) {
 	$combos = [[]];
-	foreach($sets as $key => $val) {
+	foreach($sets as $set) {
 		$new_combos = [];
 		foreach($combos as $combo) {
-			foreach($val as $item) {
-				$curr_elm = [$item];
-				$new_combo = array_merge($combo, $curr_elm);
+			foreach($set as $elm) {
+				$new_combo = array_merge([$elm], $combo);
 				$new_combos[] = $new_combo;
 			}
 		}
