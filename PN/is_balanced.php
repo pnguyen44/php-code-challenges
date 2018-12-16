@@ -36,25 +36,25 @@ function is_balanced($str) {
       $open_bracket_stack[] = $currentBracket;
     } else {
       //implies that it is a close bracket
-      if (count($open_bracket_stack) === 0) return "NO";
+      if (count($open_bracket_stack) === 0) return "false";
       $last_seen_open_bracket = array_pop($open_bracket_stack);
       $last_seen_open_bracket_matching_bracket = $bracketMapping[$last_seen_open_bracket];
-      if ($currentBracket !== $last_seen_open_bracket_matching_bracket) return 'NO';
+      if ($currentBracket !== $last_seen_open_bracket_matching_bracket) return 'false';
     }
   }
-  return count($open_bracket_stack) === 0 ? 'YES' : 'NO';
+  return count($open_bracket_stack) === 0 ? 'true' : 'false';
 }
 
 
 //test
-// print_r(is_balanced("([)]")); // false
-// print_r(is_balanced("()()")); // true
-// print_r(is_balanced("{}[]()")); // true
-// print_r(is_balanced("{[}]")); // false
-// print_r(is_balanced("{[}]")); // false
-// print_r(is_balanced("[{()()}({[]})]({}[({})])((((((()[])){}))[]{{{({({({{{{{{}}}}}})})})}}}))[][][]")); // true
-// print_r(is_balanced("{}[]()")); // true
-// print_r(is_balanced("(())((()())())")); // true
+print_r(is_balanced("([)]")); // false
+print_r(is_balanced("()()")); // true
+print_r(is_balanced("{}[]()")); // true
+print_r(is_balanced("{[}]")); // false
+print_r(is_balanced("{[}]")); // false
+print_r(is_balanced("[{()()}({[]})]({}[({})])((((((()[])){}))[]{{{({({({{{{{{}}}}}})})})}}}))[][][]")); // true
+print_r(is_balanced("{}[]()")); // true
+print_r(is_balanced("(())((()())())")); // true
 
 
 
