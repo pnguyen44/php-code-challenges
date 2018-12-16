@@ -23,12 +23,12 @@
 function countSwaps($a) {
     $numSwaps = 0;
     for ($i = 0; $i < count($a); $i++) {
-        for( $j = 0; $j < count($a) -1; $j++) {
-            if ($a[$j] > $a[$j + 1]) {
+        for( $j = 1; $j < count($a); $j++) {
+            if ($a[$j - 1] > $a[$j]) {
                 $numSwaps +=1;
                 $temp = $a[$j];
-                $a[$j] = $a[$j + 1];
-                $a[$j +1] = $temp;
+                $a[$j] = $a[$j - 1];
+                $a[$j -1] = $temp;
             }
         }
     }
