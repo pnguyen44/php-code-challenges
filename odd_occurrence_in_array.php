@@ -10,10 +10,6 @@
 // that, given an array A consisting of N integers fulfilling the above conditions, returns the value of the unpaired element.
 
 function solution($A) {
-  // $unique = array_unique($A)
-  // foreach($A as $val){
-  //     if (array_count_values())
-  // }
   $instance_arr = array_count_values($A);
   foreach($instance_arr as $key => $val){
       if ($val ===1) return $key;
